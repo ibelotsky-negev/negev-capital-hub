@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 const exits = [
   {
     company: "Gilgamesh Pharmaceuticals",
+    logo: "/logos/gilgamesh.png",
     description:
       "Asset sale of lead compound bretisilocin (GM-2505) to strategic buyer AbbVie (2025).",
     dealLabel: "AbbVie acquisition announcement",
@@ -13,6 +14,7 @@ const exits = [
   },
   {
     company: "Mindset Pharma",
+    logo: "/logos/mindset.png",
     description:
       "Exit to strategic buyer Otsuka Pharmaceutical, strengthening Otsuka's neuropsychiatric pipeline (2023).",
     dealLabel: "Otsuka acquisition announcement",
@@ -21,6 +23,7 @@ const exits = [
   },
   {
     company: "Bright Minds Biosciences",
+    logo: "/logos/brightminds.png",
     description:
       "Public-market exit — listed on Nasdaq (DRUG) advancing next-generation serotonin receptor agonists.",
     dealLabel: "Visit company",
@@ -43,8 +46,8 @@ const ExitsSection = () => {
               className="border-exit-border bg-exit-highlight/50 hover:shadow-md transition-shadow flex flex-col"
             >
               <CardHeader className="flex flex-row items-start gap-4">
-                <div className="h-14 w-14 rounded-md bg-muted flex items-center justify-center shrink-0">
-                  <span className="text-[10px] text-muted-foreground">Logo</span>
+                <div className="h-14 w-14 rounded-md bg-background border border-border flex items-center justify-center shrink-0 overflow-hidden p-1.5">
+                  <img src={exit.logo} alt={`${exit.company} logo`} loading="lazy" className="max-h-full max-w-full object-contain" />
                 </div>
                 <div className="space-y-2">
                   <CardTitle className="text-lg leading-tight">{exit.company}</CardTitle>
