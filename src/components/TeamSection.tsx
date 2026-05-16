@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Linkedin, Mail } from "lucide-react";
 import vadimPhoto from "@/assets/team/vadim.jpg";
 import kenPhoto from "@/assets/team/ken.jpg";
