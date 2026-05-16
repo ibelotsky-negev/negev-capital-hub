@@ -35,8 +35,8 @@ const NegevLabsSection = () => {
     <section id="labs" className="py-20 md:py-28 bg-muted">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground">Negev Labs — Our CNS Venture Studio</h2>
-        <p className="mt-3 text-muted-foreground text-lg">
-          Building brain health companies from first principles.
+        <p className="mt-3 text-muted-foreground text-lg max-w-3xl">
+          A venture studio advancing overlooked drugs backed by human data — moving fast to pharma licensing and targeting founder-level returns for our investors.
         </p>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {labs.map((lab) => (
