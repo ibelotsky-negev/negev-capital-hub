@@ -25,9 +25,10 @@ const press: PressItem[] = [
   },
   {
     outlet: "Endpoints News",
-    date: "TBD",
-    headline: "Coverage placeholder — replace with Endpoints / Fierce Biotech / STAT feature on Negev portfolio.",
-    url: "#",
+    date: "March 2021",
+    headline:
+      "Negev Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
+    url: "https://endpoints.news/negev-labs-debuts-with-30m-in-assets-striving-to-build-a-network-of-psychedelic-biotechs/",
   },
 ];
 
