@@ -10,6 +10,7 @@ interface TeamMember {
   name: string;
   title: string;
   photo: string;
+  photoPosition?: string;
   shortBio: string;
   fullBio: string;
 }
@@ -27,6 +28,7 @@ const team: TeamMember[] = [
     name: "Ken Belotsky",
     title: "Founding Partner — Business Development",
     photo: kenPhoto,
+    photoPosition: "center top",
     shortBio: "Technology entrepreneur and venture investor; Co-Founding Partner at Negev Capital.",
     fullBio:
       "Ken Belotsky is a technology entrepreneur and venture investor, Co-Founding Partner at Negev Capital since 2021, and Co-Founder & CEO of Negev Labs — a venture studio developing neuroplasticity-based therapeutics. He previously co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group (2018), and BrightConsult, an automotive software company acquired by Incadea. Ken has led 30+ private investments across the US, Israel, and Europe in biotech, mental health, mobility, and deep tech. He completed executive education at Columbia Business School and studied Business Economics at HSE Moscow.",
@@ -62,6 +64,7 @@ const TeamSection = () => {
                     src={member.photo}
                     alt={`${member.name} headshot`}
                     className="h-full w-full object-cover"
+                    style={{ objectPosition: member.photoPosition ?? "center" }}
                     loading="lazy"
                   />
                 </div>
@@ -83,7 +86,7 @@ const TeamSection = () => {
               <DialogHeader>
                 <div className="flex items-center gap-4">
                   <div className="h-16 w-16 rounded-full overflow-hidden bg-muted shrink-0">
-                    <img src={selected.photo} alt={`${selected.name} headshot`} className="h-full w-full object-cover" />
+                    <img src={selected.photo} alt={`${selected.name} headshot`} className="h-full w-full object-cover" style={{ objectPosition: selected.photoPosition ?? "center" }} />
                   </div>
                   <div className="text-left">
                     <DialogTitle>{selected.name}</DialogTitle>
