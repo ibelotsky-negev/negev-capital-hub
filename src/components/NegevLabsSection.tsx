@@ -19,7 +19,7 @@ const labs: Lab[] = [
     badge: "Active",
     badgeVariant: "active",
     website: "https://www.ariadnebio.com",
-    logo: "/logos/ariadne.svg",
+    logo: "/logos/ariadne.png",
   },
   {
     name: "Pipeline Asset",
