@@ -41,7 +41,7 @@ const companies: Company[] = [
     name: "Gilgamesh Pharmaceuticals",
     focus: "Asset sale to AbbVie — bretisilocin (GM-2505) for major depressive disorder.",
     status: "exit",
-    website: "https://www.gilgameshpharma.com/",
+    website: "https://www.gilgameshpharmaceutical.com/",
     note: "Acquired by AbbVie",
   },
   {
