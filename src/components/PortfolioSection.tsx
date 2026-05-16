@@ -178,7 +178,7 @@ const PortfolioSection = () => {
                   <div className="h-12 w-12 rounded bg-white border border-border flex items-center justify-center shrink-0 overflow-hidden p-1.5">
                     {company.website ? (
                       <img
-                        src={`https://logo.clearbit.com/${new URL(company.website).hostname.replace(/^www\./, "")}`}
+                        src={`https://www.google.com/s2/favicons?sz=128&domain=${new URL(company.website).hostname.replace(/^www\./, "")}`}
                         alt={`${company.name} logo`}
                         loading="lazy"
                         className="max-h-full max-w-full object-contain"
