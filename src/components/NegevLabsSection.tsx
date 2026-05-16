@@ -42,13 +42,13 @@ const NegevLabsSection = () => {
           {labs.map((lab) => (
             <Card key={lab.name} className="hover:shadow-md transition-shadow flex flex-col">
               <CardHeader className="flex flex-row items-start gap-4">
-                <div className="h-12 w-12 rounded bg-background border border-border flex items-center justify-center shrink-0 overflow-hidden p-1.5">
+                <div className="h-20 w-20 rounded bg-background border border-border flex items-center justify-center shrink-0 overflow-hidden">
                   {lab.logo ? (
                     <img
                       src={lab.logo}
                       alt={`${lab.name} logo`}
                       loading="lazy"
-                      className="max-h-full max-w-full object-contain"
+                      className="h-full w-full object-contain"
                     />
                   ) : (
                     <span className="text-[10px] text-muted-foreground">
