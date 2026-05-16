@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import vadimPhoto from "@/assets/team/vadim.jpg";
 import kenPhoto from "@/assets/team/ken.jpg";
 import stuartPhoto from "@/assets/team/stuart.jpg";
@@ -10,9 +10,9 @@ interface TeamMember {
   title: string;
   photo: string;
   photoPosition?: string;
-  bio: string;
-  linkedin?: string;
-  email?: string;
+  headline: string;
+  credentials: string[];
+  linkedin: string;
 }
 
 const team: TeamMember[] = [
@@ -20,35 +20,62 @@ const team: TeamMember[] = [
     name: "Vadim Uzberg",
     title: "Partner, Fund Management & LP Relations",
     photo: vadimPhoto,
-    bio:
-      "Co-Founder and Managing Director of Negev Capital since 2021. 25+ years in private equity and venture capital across Europe, the US, and emerging markets. Previously Partner at Baring Vostok Capital Partners (~$4B AUM), where he spent 15+ years leading healthcare, pharma, and telecoms investments, and Investment Director and CFO at Eagle Venture Partners (EBRD-backed), overseeing fund management across multiple jurisdictions. Education: Harvard Business School Program for Leadership Development; degrees in Economics and Enterprise Management, Voronezh State University. Based in Cascais, Portugal.",
-    email: "info@negevcap.com",
+    headline: "Co-Founder and Managing Director of Negev Capital since 2021.",
+    credentials: [
+      "25+ years in private equity and venture capital across Europe, US, and emerging markets",
+      "Former Partner at Baring Vostok Capital Partners (~$4B AUM)",
+      "Former Investment Director and CFO at Eagle Venture Partners (EBRD-backed)",
+      "Harvard Business School (Leadership Development); Voronezh State University",
+      "Based in Cascais, Portugal",
+    ],
+    linkedin: "https://www.linkedin.com/in/vadim-uzberg/",
   },
   {
     name: "Ken Belotsky",
-    title: "Partner, Business Development · Founding Partner, Negev Labs",
+    title: "Partner · Founding Partner, Negev Labs",
     photo: kenPhoto,
     photoPosition: "center top",
-    bio:
-      "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Negev Labs, the fund's CNS venture studio developing neuroplasticity-based therapeutics. Technology entrepreneur and venture investor with 30+ private investments across the US, Israel, and Europe in biotech, mental health, mobility, and deep tech. Previously co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group in 2018, and BrightConsult, an automotive software company acquired by Incadea. Education: Columbia Business School executive education; Business Economics, HSE. Based in Vienna, Austria.",
-    email: "info@negevcap.com",
+    headline:
+      "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Negev Labs, the fund's CNS venture studio.",
+    credentials: [
+      "Technology entrepreneur and venture investor with 30+ private investments across the US, Israel, and Europe",
+      "Co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group (2018)",
+      "Co-founded BrightConsult, an automotive software company acquired by Incadea",
+      "Columbia Business School (Executive Education); Business Economics, HSE",
+      "Based in Vienna, Austria",
+    ],
+    linkedin: "https://www.linkedin.com/in/ken-belotsky/",
   },
   {
     name: "Dr. Stuart Seidman",
     title: "Partner, Medical Science Lead",
     photo: stuartPhoto,
-    bio:
-      "Board-certified psychiatrist and internationally recognized expert in psychopharmacology and neuroendocrinology. 15+ years as Assistant Professor of Clinical Psychiatry at Columbia University and Assistant Attending Psychiatrist at NewYork-Presbyterian. Co-directed the Brain-Behavior Clinic at Columbia, with international teaching appointments including Tel Aviv University. Prolific researcher with publications in American Journal of Psychiatry, JAMA, and Biological Psychiatry. Expert in depression, hormonal regulation, aging, and sexual health. Active contributor to editorial boards and professional societies globally. Based in New York.",
-    email: "info@negevcap.com",
+    headline:
+      "Board-certified psychiatrist and internationally recognized expert in psychopharmacology and neuroendocrinology.",
+    credentials: [
+      "15+ years as Assistant Professor of Clinical Psychiatry at Columbia University",
+      "Assistant Attending Psychiatrist at NewYork-Presbyterian; co-directed the Brain-Behavior Clinic at Columbia",
+      "International teaching appointments including Tel Aviv University",
+      "Publications in American Journal of Psychiatry, JAMA, and Biological Psychiatry",
+      "Based in New York",
+    ],
+    linkedin: "https://www.linkedin.com/in/stuart-seidman/",
   },
   {
     name: "Prof. Bernard Lerer",
     title: "Chief of Scientific Advisory Board",
     photo: bernardPhoto,
     photoPosition: "center top",
-    bio:
-      "Professor of Psychiatry and Founder of the Biological Psychiatry Laboratory at Hadassah – Hebrew University Medical Center. Trained at the University of Cape Town, Hadassah and Herzog Hospitals, and Lafayette Clinic – Wayne State University. Former Director of the National Institute for Psychobiology in Israel and Founding Editor-in-Chief of the International Journal of Neuropsychopharmacology. Recipient of the A.E. Bennet Award (US Society for Biological Psychiatry) and Lifetime Achievement Awards from the Israel Psychiatric Association and the International Society for Affective Disorders; Fellow of the American College of Neuropsychopharmacology. Research expertise in behavioral and biochemical psychopharmacology, molecular neurobiology, and neurogenetics, with 380+ peer-reviewed publications and four books. Based in Jerusalem, Israel.",
-    email: "info@negevcap.com",
+    headline:
+      "Professor of Psychiatry and Founder of the Biological Psychiatry Laboratory at Hadassah – Hebrew University Medical Center.",
+    credentials: [
+      "Former Director of the National Institute for Psychobiology in Israel",
+      "Founding Editor-in-Chief of the International Journal of Neuropsychopharmacology",
+      "A.E. Bennet Award (US Society for Biological Psychiatry); Fellow, American College of Neuropsychopharmacology",
+      "380+ peer-reviewed publications and four books in psychopharmacology and neurogenetics",
+      "Based in Jerusalem, Israel",
+    ],
+    linkedin: "https://www.linkedin.com/in/bernard-lerer/",
   },
 ];
 
@@ -79,28 +106,29 @@ const TeamSection = () => {
                   <h3 className="text-xl font-semibold text-foreground leading-tight">{member.name}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{member.title}</p>
                 </div>
-                <p className="text-sm text-foreground/80 leading-relaxed flex-1">{member.bio}</p>
+                <p className="text-sm font-medium text-foreground leading-relaxed">
+                  {member.headline}
+                </p>
+                <ul className="space-y-1.5 flex-1">
+                  {member.credentials.map((c) => (
+                    <li
+                      key={c}
+                      className="relative pl-3.5 text-sm text-foreground/75 leading-relaxed before:absolute before:left-0 before:top-[0.6em] before:h-1 before:w-1 before:rounded-full before:bg-foreground/40"
+                    >
+                      {c}
+                    </li>
+                  ))}
+                </ul>
                 <div className="flex items-center gap-3 pt-2 border-t border-border">
-                  {member.linkedin && (
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${member.name} on LinkedIn`}
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Linkedin className="h-4 w-4" />
-                    </a>
-                  )}
-                  {member.email && (
-                    <a
-                      href={`mailto:${member.email}`}
-                      aria-label={`Email ${member.name}`}
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Mail className="h-4 w-4" />
-                    </a>
-                  )}
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on LinkedIn`}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
                 </div>
               </CardContent>
             </Card>
