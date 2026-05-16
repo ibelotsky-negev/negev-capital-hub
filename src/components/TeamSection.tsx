@@ -2,32 +2,42 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Linkedin, Mail } from "lucide-react";
+import vadimPhoto from "@/assets/team/vadim.jpg";
+import kenPhoto from "@/assets/team/ken.jpg";
+import stuartPhoto from "@/assets/team/stuart.jpg";
 
 interface TeamMember {
   name: string;
   title: string;
+  photo: string;
   shortBio: string;
   fullBio: string;
 }
 
 const team: TeamMember[] = [
   {
-    name: "Ken Belotsky",
-    title: "Managing Partner",
-    shortBio: "Experienced biotech investor with deep expertise in CNS therapeutics and early-stage venture capital.",
-    fullBio: "Ken Belotsky is the Managing Partner of Negev Capital. He has over two decades of experience in biotech venture investing, with a particular focus on central nervous system therapeutics. Ken has led investments across multiple stages of drug development, from preclinical through commercialization. His portfolio track record includes multiple successful exits and IPOs in the life sciences sector. Prior to founding Negev Capital, Ken held senior roles at leading healthcare investment firms.",
-  },
-  {
-    name: "Stuart Seidman",
-    title: "Partner",
-    shortBio: "Healthcare investor and advisor with a track record of identifying breakthrough CNS therapies.",
-    fullBio: "Stuart Seidman is a Partner at Negev Capital, where he focuses on deal sourcing, due diligence, and portfolio management. Stuart brings extensive experience in healthcare finance and operations, having worked with both public and private biotech companies. He has been instrumental in identifying and supporting innovative CNS therapeutics companies. Stuart holds board positions at several Negev Capital portfolio companies and plays an active role in their strategic development.",
-  },
-  {
     name: "Vadim Uzberg",
-    title: "Partner",
-    shortBio: "Venture capital professional specializing in neuroscience and brain health investments.",
-    fullBio: "Vadim Uzberg is a Partner at Negev Capital with a focus on neuroscience and brain health investments. Vadim has significant experience in venture capital, private equity, and corporate development in the life sciences industry. He works closely with portfolio companies on business development, partnerships, and financing strategy. Vadim is passionate about advancing therapies that address unmet needs in CNS disorders and neurodegenerative diseases. He brings a strong network of relationships across the biotech ecosystem.",
+    title: "Partner — Fund Management & LP Relations",
+    photo: vadimPhoto,
+    shortBio: "25+ years in PE & VC across Europe, US, and emerging markets; Co-Founder & MD of Negev Capital.",
+    fullBio:
+      "Vadim Uzberg is Co-Founder and Managing Director of Negev Capital (since 2021), leading fund management and LP relations. He brings 25+ years of private equity and venture capital experience across Europe, the US, and emerging markets. Previously a Partner at Baring Vostok Capital Partners (~$4B AUM), where he spent 15+ years leading healthcare, pharma, and telecoms investments, and Investment Director & CFO at Eagle Venture Partners (EBRD-backed), overseeing fund management across multiple jurisdictions. Vadim completed the Program for Leadership Development at Harvard Business School and holds degrees in Economics and Enterprise Management from Voronezh State University.",
+  },
+  {
+    name: "Ken Belotsky",
+    title: "Partner — Business Development | CEO, Negev Labs",
+    photo: kenPhoto,
+    shortBio: "Technology entrepreneur and venture investor; Co-Founding Partner at Negev Capital and CEO of Negev Labs.",
+    fullBio:
+      "Ken Belotsky is a technology entrepreneur and venture investor, Co-Founding Partner at Negev Capital since 2021, and Co-Founder & CEO of Negev Labs — a venture studio developing neuroplasticity-based therapeutics. He previously co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group (2018), and BrightConsult, an automotive software company acquired by Incadea. Ken has led 30+ private investments across the US, Israel, and Europe in biotech, mental health, mobility, and deep tech. He completed executive education at Columbia Business School and studied Business Economics at HSE Moscow.",
+  },
+  {
+    name: "Dr. Stuart Seidman",
+    title: "Partner — Medical Science Lead | Psychiatrist, New York",
+    photo: stuartPhoto,
+    shortBio: "Board-certified psychiatrist and internationally recognised expert in psychopharmacology and neuroendocrinology.",
+    fullBio:
+      "Dr. Stuart Seidman is a board-certified psychiatrist and internationally recognised expert in psychopharmacology and neuroendocrinology. He has served 15+ years as Assistant Professor of Clinical Psychiatry at Columbia University and Assistant Attending Psychiatrist at NY-Presbyterian, and co-directed the Brain-Behavior Clinic at Columbia, with international teaching engagements including Tel Aviv University. A prolific researcher, his work has appeared in the American Journal of Psychiatry, JAMA, and Biological Psychiatry. His clinical expertise spans depression, hormonal regulation, aging, and sexual health, and he is an active contributor to editorial boards and professional societies globally.",
   },
 ];
 
@@ -47,8 +57,13 @@ const TeamSection = () => {
               onClick={() => setSelected(member)}
             >
               <CardHeader className="items-center pb-2">
-                <div className="h-[120px] w-[120px] rounded-full bg-muted flex items-center justify-center">
-                  <span className="text-xs text-muted-foreground">Photo</span>
+                <div className="h-[120px] w-[120px] rounded-full overflow-hidden bg-muted">
+                  <img
+                    src={member.photo}
+                    alt={`${member.name} headshot`}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
               </CardHeader>
               <CardContent className="space-y-1">
@@ -66,8 +81,15 @@ const TeamSection = () => {
           {selected && (
             <>
               <DialogHeader>
-                <DialogTitle>{selected.name}</DialogTitle>
-                <DialogDescription>{selected.title}</DialogDescription>
+                <div className="flex items-center gap-4">
+                  <div className="h-16 w-16 rounded-full overflow-hidden bg-muted shrink-0">
+                    <img src={selected.photo} alt={`${selected.name} headshot`} className="h-full w-full object-cover" />
+                  </div>
+                  <div className="text-left">
+                    <DialogTitle>{selected.name}</DialogTitle>
+                    <DialogDescription>{selected.title}</DialogDescription>
+                  </div>
+                </div>
               </DialogHeader>
               <p className="text-sm text-muted-foreground leading-relaxed">{selected.fullBio}</p>
               <div className="flex items-center gap-4 pt-2">
