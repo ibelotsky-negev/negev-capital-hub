@@ -15,6 +15,26 @@ interface Company {
   dealUrl?: string;
 }
 
+const companyLogos: Record<string, string> = {
+  "Gilgamesh Pharmaceuticals": "/logos/gilgamesh.png",
+  "Mindset Pharma": "/logos/mindset.png",
+  "Bright Minds Biosciences": "/logos/brightminds.png",
+  "Awakn Life Sciences": "/logos/solvonis.png",
+  "Beckley Psytech": "/logos/beckley.svg",
+  "Filament Health": "/logos/filament.svg",
+  "Small Pharma": "/logos/helus.png",
+  "Negev Labs": "/logos/negev.svg",
+  "Helus Pharma": "/logos/helus.png",
+  "Freedom Biosciences": "/logos/freedom.png",
+  "Biomind Labs": "/logos/biomind.png",
+  Psylo: "/logos/psylo.png",
+  "Delix Therapeutics": "/logos/delix.svg",
+  "MindState Design Labs": "/logos/mindstate.webp",
+  "A Better Life Pharma": "/logos/abetterlife.png",
+  "Reconnect Labs": "/logos/reconnect.png",
+  "Reset Pharma": "/logos/reset.png",
+};
+
 const companies: Company[] = [
   // Exits
   {
@@ -172,13 +192,14 @@ const PortfolioSection = () => {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((company, i) => {
             const config = statusConfig[company.status];
+            const logoSrc = companyLogos[company.name];
             return (
               <Card key={`${company.name}-${i}`} className="hover:shadow-md transition-shadow flex flex-col">
                 <CardHeader className="flex flex-row items-start gap-4">
-                  <div className="h-12 w-12 rounded bg-white border border-border flex items-center justify-center shrink-0 overflow-hidden p-1.5">
-                    {company.website ? (
+                  <div className="h-12 w-12 rounded bg-background border border-border flex items-center justify-center shrink-0 overflow-hidden p-1.5">
+                    {logoSrc ? (
                       <img
-                        src={`https://www.google.com/s2/favicons?sz=128&domain=${new URL(company.website).hostname.replace(/^www\./, "")}`}
+                        src={logoSrc}
                         alt={`${company.name} logo`}
                         loading="lazy"
                         className="max-h-full max-w-full object-contain"
@@ -192,7 +213,7 @@ const PortfolioSection = () => {
                     ) : null}
                     <span
                       className="text-[10px] text-muted-foreground"
-                      style={{ display: company.website ? "none" : "block" }}
+                      style={{ display: logoSrc ? "none" : "block" }}
                     >
                       {company.name
                         .split(" ")
