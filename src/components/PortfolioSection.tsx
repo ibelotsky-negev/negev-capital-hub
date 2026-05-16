@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type Status = "exit" | "active" | "merged";
+type Status = "exit" | "active" | "merged" | "liquidity";
 
 interface Company {
   name: string;
