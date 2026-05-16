@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-type Status = "exit" | "active" | "labs" | "merged";
+type Status = "exit" | "active" | "merged";
 
 interface Company {
   name: string;
@@ -13,6 +12,10 @@ interface Company {
   website?: string;
   note?: string;
   dealUrl?: string;
+  stage?: string;
+  modality?: string;
+  indication?: string;
+  year?: string;
 }
 
 const companyLogos: Record<string, string> = {
@@ -22,27 +25,23 @@ const companyLogos: Record<string, string> = {
   "Awakn Life Sciences": "/logos/solvonis.png",
   "Beckley Psytech": "/logos/beckley.svg",
   "Filament Health": "/logos/filament.svg",
-  "Small Pharma": "/logos/helus.png",
-  "Negev Labs": "/logos/negevlabs.png",
   "Helus Pharma": "/logos/helus.png",
   "Freedom Biosciences": "/logos/freedom.png",
-  "Biomind Labs": "/logos/biomind.png",
   Psylo: "/logos/psylo.png",
   "Delix Therapeutics": "/logos/delix.svg",
-  "MindState Design Labs": "/logos/mindstate.webp",
-  "A Better Life Pharma": "/logos/abetterlife.png",
-  "Reconnect Labs": "/logos/reconnect.png",
-  "Reset Pharma": "/logos/reset.png",
 };
 
 const companies: Company[] = [
-  // Exits
   {
     name: "Gilgamesh Pharmaceuticals",
     focus: "Asset sale to AbbVie — bretisilocin (GM-2505) for major depressive disorder.",
     status: "exit",
     website: "https://www.gilgameshpharmaceutical.com/",
     note: "Acquired by AbbVie",
+    stage: "Acquired",
+    modality: "Small molecule",
+    indication: "Major Depressive Disorder",
+    year: "2022",
   },
   {
     name: "Mindset Pharma",
@@ -50,6 +49,10 @@ const companies: Company[] = [
     status: "exit",
     website: "https://www.mindsetpharma.com/",
     note: "Acquired by Otsuka",
+    stage: "Acquired",
+    modality: "Small molecule",
+    indication: "Neuropsychiatric",
+    year: "2021",
   },
   {
     name: "Bright Minds Biosciences",
@@ -57,6 +60,10 @@ const companies: Company[] = [
     status: "exit",
     website: "https://www.brightmindsbio.com/",
     note: "Public market (Nasdaq: DRUG)",
+    stage: "Public",
+    modality: "Small molecule",
+    indication: "Epilepsy / Neuropsychiatry",
+    year: "2021",
   },
   {
     name: "Awakn Life Sciences",
@@ -64,6 +71,8 @@ const companies: Company[] = [
     status: "merged",
     website: "https://www.solvonis.com/",
     note: "Merged with Solvonis Therapeutics",
+    modality: "Small molecule",
+    indication: "Alcohol Use Disorder",
   },
   {
     name: "Beckley Psytech",
@@ -71,6 +80,9 @@ const companies: Company[] = [
     status: "merged",
     website: "https://atai.life/",
     note: "Merged with atai Life Sciences",
+    stage: "Phase 2",
+    modality: "Psychedelic",
+    indication: "Treatment-resistant depression",
   },
   {
     name: "Filament Health",
@@ -78,7 +90,10 @@ const companies: Company[] = [
     status: "merged",
     website: "https://redlighthollandcorp.com/",
     note: "Merged with Red Light Holland (CSE: TRIP)",
-    dealUrl: "https://www.newsfilecorp.com/release/288047/RETRANSMISSION-Red-Light-Holland-Signs-Definitive-Agreement-with-Filament-Health-to-Expand-Its-Platform-for-Natural-Psychedelic-Drug-Development-and-Microdosing-Innovation",
+    dealUrl:
+      "https://www.newsfilecorp.com/release/288047/RETRANSMISSION-Red-Light-Holland-Signs-Definitive-Agreement-with-Filament-Health-to-Expand-Its-Platform-for-Natural-Psychedelic-Drug-Development-and-Microdosing-Innovation",
+    modality: "Natural psychedelics",
+    indication: "Clinical supply",
   },
   {
     name: "Small Pharma",
@@ -87,77 +102,102 @@ const companies: Company[] = [
     website: "https://www.cybin.com/",
     note: "Merged with Helus Pharma (formerly Cybin)",
     dealUrl: "https://www.businesswire.com/news/home/20230828350890/en/Cybin-to-Acquire-Small-Pharma-Inc.",
+    stage: "Phase 2",
+    modality: "DMT",
+    indication: "Depression / Anxiety",
   },
-  // Negev Labs
-  {
-    name: "Negev Labs",
-    focus: "Venture studio building next-generation CNS and brain-health therapeutics from inception.",
-    status: "labs",
-    website: "https://www.negevlabs.com/",
-  },
-  // Active portfolio
   {
     name: "Helus Pharma",
-    focus: "Clinical-stage neuropsychiatry company (formerly Cybin) advancing novel serotonergic agonists for major depressive disorder and generalized anxiety disorder.",
+    focus:
+      "Clinical-stage neuropsychiatry company (formerly Cybin) advancing novel serotonergic agonists for major depressive disorder and generalized anxiety disorder.",
     status: "active",
     website: "https://www.cybin.com/",
     note: "Nasdaq: HELP",
+    stage: "Phase 2",
+    modality: "Serotonergic agonist",
+    indication: "MDD / GAD",
   },
   {
     name: "Freedom Biosciences",
-    focus: "Clinical-stage biotech platform developing next-generation ketamine and psychedelic therapeutics for treatment-resistant depression.",
+    focus:
+      "Clinical-stage biotech platform developing next-generation ketamine and psychedelic therapeutics for treatment-resistant depression.",
     status: "active",
     website: "https://freedombio.co/",
+    stage: "Phase 1",
+    modality: "Ketamine / psychedelic",
+    indication: "Treatment-resistant depression",
   },
   {
     name: "Biomind Labs",
     focus: "Novel pharmaceutical formulations of DMT, 5-MeO-DMT and mescaline for CNS disorders.",
     status: "active",
     website: "https://biomindlabs.com/",
+    stage: "Preclinical",
+    modality: "DMT / 5-MeO-DMT",
+    indication: "CNS disorders",
   },
   {
     name: "Psylo",
     focus: "Next-generation non-hallucinogenic 5-HT2A agonists as alternatives to SSRIs.",
     status: "active",
     website: "https://psylo.bio/",
+    stage: "Preclinical",
+    modality: "Non-hallucinogenic 5-HT2A",
+    indication: "Depression",
   },
   {
     name: "Delix Therapeutics",
     focus: "Non-hallucinogenic neuroplastogens targeting depression and neurodegeneration.",
     status: "active",
     website: "https://www.delixtherapeutics.com/",
+    stage: "Phase 1",
+    modality: "Neuroplastogen",
+    indication: "Depression / Neurodegeneration",
   },
   {
     name: "MindState Design Labs",
     focus: "Computational design of novel serotonergic psychedelic compounds.",
     status: "active",
     website: "https://www.mindstate.design/",
+    stage: "Preclinical",
+    modality: "Serotonergic psychedelic",
+    indication: "Neuropsychiatric",
   },
   {
     name: "A Better Life Pharma",
     focus: "Patentable psychedelic and analgesic compounds for mental health and pain.",
     status: "active",
     website: "https://abetterlifepharma.com/",
+    stage: "Preclinical",
+    modality: "Psychedelic / analgesic",
+    indication: "Mental health / Pain",
   },
   {
     name: "Reconnect Labs",
-    focus: "Swiss precision neuropsychiatry company developing advanced therapeutics and predictive diagnostics for insomnia, anxiety and substance use disorders.",
+    focus:
+      "Swiss precision neuropsychiatry company developing advanced therapeutics and predictive diagnostics for insomnia, anxiety and substance use disorders.",
     status: "active",
     website: "https://reconnect-labs.com/",
+    stage: "Preclinical",
+    modality: "Precision neuropsychiatry",
+    indication: "Insomnia / Anxiety / SUD",
   },
   {
     name: "Reset Pharma",
-    focus: "Neuro-biotechnology company developing first-in-class psilocybin-inspired therapies to reset neural networks and address demoralization syndrome in patients with life-altering diseases.",
+    focus:
+      "Neuro-biotechnology company developing first-in-class psilocybin-inspired therapies to reset neural networks and address demoralization syndrome in patients with life-altering diseases.",
     status: "active",
     website: "https://www.resetpharma.com/",
+    stage: "Preclinical",
+    modality: "Psilocybin-inspired",
+    indication: "Demoralization syndrome",
   },
 ];
 
-const statusConfig: Record<Status, { label: string; variant: "exit" | "active" | "labs" | "merged" }> = {
-  exit: { label: "Realized Exit", variant: "exit" },
-  active: { label: "Active", variant: "active" },
-  labs: { label: "Negev Labs", variant: "labs" },
-  merged: { label: "Merged", variant: "merged" },
+const statusConfig: Record<Status, { label: string; accent: boolean }> = {
+  exit: { label: "Realized Exit", accent: true },
+  active: { label: "Active", accent: false },
+  merged: { label: "Merged", accent: false },
 };
 
 const filterOptions = [
@@ -165,8 +205,45 @@ const filterOptions = [
   { value: "active", label: "Active" },
   { value: "exit", label: "Exits" },
   { value: "merged", label: "Mergers" },
-  { value: "labs", label: "Negev Labs" },
 ];
+
+const Monogram = ({ name }: { name: string }) => {
+  const initials = name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+  return (
+    <div className="h-12 w-12 rounded border border-border bg-background flex items-center justify-center shrink-0">
+      <span className="text-sm font-semibold tracking-wide text-foreground">{initials}</span>
+    </div>
+  );
+};
+
+const Meta = ({ company }: { company: Company }) => {
+  const items = [
+    company.stage && { label: "Stage", value: company.stage },
+    company.modality && { label: "Modality", value: company.modality },
+    company.indication && { label: "Indication", value: company.indication },
+    company.year && { label: "Invested", value: company.year },
+  ].filter(Boolean) as { label: string; value: string }[];
+  if (!items.length) return null;
+  return (
+    <div className="mt-4 pt-4 border-t border-border flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-muted-foreground">
+      {items.map((it, idx) => (
+        <span key={it.label} className="inline-flex items-center gap-2">
+          <span>
+            <span className="uppercase tracking-wider text-[10px] text-muted-foreground/80">{it.label}</span>{" "}
+            <span className="text-foreground/80">{it.value}</span>
+          </span>
+          {idx < items.length - 1 && <span aria-hidden="true">·</span>}
+        </span>
+      ))}
+    </div>
+  );
+};
 
 const PortfolioSection = () => {
   const [filter, setFilter] = useState("all");
@@ -176,55 +253,73 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-warm-gray">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Portfolio</h2>
-        <p className="mt-3 text-muted-foreground text-lg">
-          Our investments across the CNS therapeutics landscape.
-        </p>
-        <Tabs value={filter} onValueChange={setFilter} className="mt-8">
-          <TabsList>
-            {filterOptions.map((opt) => (
-              <TabsTrigger key={opt.value} value={opt.value}>
-                {opt.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">Portfolio</p>
+        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-foreground max-w-3xl">
+          14 companies across the CNS therapeutics landscape.
+        </h2>
+
+        <div className="mt-8 border-b border-border">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+            {filterOptions.map((opt) => {
+              const active = filter === opt.value;
+              return (
+                <button
+                  key={opt.value}
+                  type="button"
+                  onClick={() => setFilter(opt.value)}
+                  className={cn(
+                    "relative py-3 text-sm tracking-wide transition-colors",
+                    active ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  {opt.label}
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      "absolute left-0 right-0 -bottom-px h-px transition-colors",
+                      active ? "bg-foreground" : "bg-transparent",
+                    )}
+                  />
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((company, i) => {
             const config = statusConfig[company.status];
             const logoSrc = companyLogos[company.name];
             return (
-              <Card key={`${company.name}-${i}`} className="hover:shadow-md transition-shadow flex flex-col">
+              <Card
+                key={`${company.name}-${i}`}
+                className="flex flex-col border-border transition-all duration-200 hover:shadow-md hover:border-foreground/30"
+              >
                 <CardHeader className="flex flex-row items-start gap-4">
-                  <div className="h-12 w-12 rounded bg-background border border-border flex items-center justify-center shrink-0 overflow-hidden p-1.5">
-                    {logoSrc ? (
+                  {logoSrc ? (
+                    <div className="h-12 w-12 rounded border border-border bg-background flex items-center justify-center shrink-0 overflow-hidden p-1.5">
                       <img
                         src={logoSrc}
                         alt={`${company.name} logo`}
                         loading="lazy"
                         className="max-h-full max-w-full object-contain"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          target.style.display = "none";
-                          const fallback = target.nextElementSibling as HTMLElement | null;
-                          if (fallback) fallback.style.display = "block";
-                        }}
                       />
-                    ) : null}
-                    <span
-                      className="text-[10px] text-muted-foreground"
-                      style={{ display: logoSrc ? "none" : "block" }}
-                    >
-                      {company.name
-                        .split(" ")
-                        .slice(0, 2)
-                        .map((w) => w[0])
-                        .join("")}
-                    </span>
-                  </div>
-                  <div className="space-y-1.5 min-w-0">
+                    </div>
+                  ) : (
+                    <Monogram name={company.name} />
+                  )}
+                  <div className="space-y-2 min-w-0">
                     <CardTitle className="text-base leading-tight">{company.name}</CardTitle>
-                    <Badge variant={config.variant}>{config.label}</Badge>
+                    <span
+                      className={cn(
+                        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
+                        config.accent
+                          ? "border-[hsl(40_60%_45%)] text-[hsl(40_60%_35%)]"
+                          : "border-border text-foreground/70",
+                      )}
+                    >
+                      {config.label}
+                    </span>
                   </div>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-1">
@@ -256,6 +351,7 @@ const PortfolioSection = () => {
                       </a>
                     )}
                   </div>
+                  <Meta company={company} />
                 </CardContent>
               </Card>
             );
