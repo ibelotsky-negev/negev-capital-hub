@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         <a href="#" aria-label="Negev Capital" className="flex items-center">
-          <img src={negevLogo} alt="Negev Capital" className="h-10 w-auto" />
+          <img src={negevLogo} alt="Negev Capital" className="h-12 md:h-14 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
