@@ -12,6 +12,7 @@ interface Company {
   status: Status;
   website?: string;
   note?: string;
+  dealUrl?: string;
 }
 
 const companies: Company[] = [
@@ -51,6 +52,14 @@ const companies: Company[] = [
     website: "https://atai.life/",
     note: "Merged with atai Life Sciences",
   },
+  {
+    name: "Filament Health",
+    focus: "GMP manufacturer of natural, standardized psychedelic drug candidates for clinical development.",
+    status: "merged",
+    website: "https://redlighthollandcorp.com/",
+    note: "Merged with Red Light Holland (CSE: TRIP)",
+    dealUrl: "https://www.newsfilecorp.com/release/288047/RETRANSMISSION-Red-Light-Holland-Signs-Definitive-Agreement-with-Filament-Health-to-Expand-Its-Platform-for-Natural-Psychedelic-Drug-Development-and-Microdosing-Innovation",
+  },
   // Negev Labs
   {
     name: "Negev Labs",
@@ -59,18 +68,6 @@ const companies: Company[] = [
     website: "https://negevcap.com/",
   },
   // Active portfolio
-  {
-    name: "Clairvoyant Therapeutics",
-    focus: "Psilocybin therapy for Alcohol Use Disorder, advancing toward EU, UK and Canada approval.",
-    status: "active",
-    website: "https://www.clairvoyantrx.com/",
-  },
-  {
-    name: "Filament Health",
-    focus: "Natural, standardized psychedelic drug candidates for clinical development.",
-    status: "active",
-    website: "https://www.filament.health/",
-  },
   {
     name: "Biomind Labs",
     focus: "Novel pharmaceutical formulations of DMT, 5-MeO-DMT and mescaline for CNS disorders.",
@@ -82,12 +79,6 @@ const companies: Company[] = [
     focus: "Next-generation non-hallucinogenic 5-HT2A agonists as alternatives to SSRIs.",
     status: "active",
     website: "https://psylo.bio/",
-  },
-  {
-    name: "Psyched Wellness",
-    focus: "Amanita muscaria-derived consumer wellness products for stress, relaxation and sleep.",
-    status: "active",
-    website: "https://psyched-wellness.com/",
   },
   {
     name: "Delix Therapeutics",
@@ -108,21 +99,16 @@ const companies: Company[] = [
     website: "https://abetterlifepharma.com/",
   },
   {
-    name: "MindBio Therapeutics",
-    focus: "Microdose LSD therapeutics for depression and end-of-life distress.",
-    status: "active",
-    website: "https://www.mindbiotherapeutics.com/",
-  },
-  {
     name: "Reconnect Labs",
-    focus: "Digital and pharmacological tools supporting psychedelic-assisted therapy.",
+    focus: "Swiss precision neuropsychiatry company developing advanced therapeutics and predictive diagnostics for insomnia, anxiety and substance use disorders.",
     status: "active",
     website: "https://reconnect-labs.com/",
   },
   {
     name: "Reset Pharma",
-    focus: "Short-duration psychedelic therapies designed for in-clinic administration.",
+    focus: "Neuro-biotechnology company developing first-in-class psilocybin-inspired therapies to reset neural networks and address demoralization syndrome in patients with life-altering diseases.",
     status: "active",
+    website: "https://www.resetpharma.com/",
   },
   {
     name: "Nanopsy",
@@ -186,17 +172,30 @@ const PortfolioSection = () => {
                   {company.note && (
                     <p className="mt-3 text-xs font-medium text-foreground/80">{company.note}</p>
                   )}
-                  {company.website && (
-                    <a
-                      href={company.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      Visit website
-                      <ExternalLink className="h-3 w-3" />
-                    </a>
-                  )}
+                  <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+                    {company.website && (
+                      <a
+                        href={company.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        Visit website
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
+                    {company.dealUrl && (
+                      <a
+                        href={company.dealUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        Deal announcement
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             );
