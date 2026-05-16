@@ -5,10 +5,11 @@ import negevLogoSvg from "@/assets/negev-capital-logo.svg?raw";
 
 const navLinks = [
   { label: "Thesis", href: "#thesis" },
-  { label: "Portfolio", href: "#portfolio" },
   { label: "Exits", href: "#exits" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Team", href: "#team" },
   { label: "Negev Labs", href: "#labs" },
+  { label: "Press", href: "#press" },
   { label: "Contact", href: "#contact" },
 ];
 
