@@ -92,8 +92,8 @@ const companies: Company[] = [
     note: "Merged with Red Light Holland (CSE: TRIP)",
     dealUrl:
       "https://www.newsfilecorp.com/release/288047/RETRANSMISSION-Red-Light-Holland-Signs-Definitive-Agreement-with-Filament-Health-to-Expand-Its-Platform-for-Natural-Psychedelic-Drug-Development-and-Microdosing-Innovation",
-    modality: "Natural psychedelics",
-    indication: "Clinical supply",
+    modality: "Botanical psychedelics",
+    indication: "Substance Use Disorders",
   },
   {
     name: "Small Pharma",
