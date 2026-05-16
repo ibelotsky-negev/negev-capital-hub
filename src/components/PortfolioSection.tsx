@@ -253,11 +253,6 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-warm-gray">
       <div className="container mx-auto px-6">
-        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">Portfolio</p>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-foreground max-w-3xl">
-          14 companies across the CNS therapeutics landscape.
-        </h2>
-
         <p className="eyebrow">Portfolio</p>
         <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground max-w-3xl">
           14 companies across the CNS therapeutics landscape.
