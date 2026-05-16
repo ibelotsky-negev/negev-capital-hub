@@ -69,18 +69,6 @@ const companies: Company[] = [
   },
   // Active portfolio
   {
-    name: "Clairvoyant Therapeutics",
-    focus: "Psilocybin therapy for Alcohol Use Disorder, advancing toward EU, UK and Canada approval.",
-    status: "active",
-    website: "https://www.clairvoyantrx.com/",
-  },
-  {
-    name: "Filament Health",
-    focus: "Natural, standardized psychedelic drug candidates for clinical development.",
-    status: "active",
-    website: "https://www.filament.health/",
-  },
-  {
     name: "Biomind Labs",
     focus: "Novel pharmaceutical formulations of DMT, 5-MeO-DMT and mescaline for CNS disorders.",
     status: "active",
@@ -91,12 +79,6 @@ const companies: Company[] = [
     focus: "Next-generation non-hallucinogenic 5-HT2A agonists as alternatives to SSRIs.",
     status: "active",
     website: "https://psylo.bio/",
-  },
-  {
-    name: "Psyched Wellness",
-    focus: "Amanita muscaria-derived consumer wellness products for stress, relaxation and sleep.",
-    status: "active",
-    website: "https://psyched-wellness.com/",
   },
   {
     name: "Delix Therapeutics",
@@ -117,21 +99,16 @@ const companies: Company[] = [
     website: "https://abetterlifepharma.com/",
   },
   {
-    name: "MindBio Therapeutics",
-    focus: "Microdose LSD therapeutics for depression and end-of-life distress.",
-    status: "active",
-    website: "https://www.mindbiotherapeutics.com/",
-  },
-  {
     name: "Reconnect Labs",
-    focus: "Digital and pharmacological tools supporting psychedelic-assisted therapy.",
+    focus: "Swiss precision neuropsychiatry company developing advanced therapeutics and predictive diagnostics for insomnia, anxiety and substance use disorders.",
     status: "active",
     website: "https://reconnect-labs.com/",
   },
   {
     name: "Reset Pharma",
-    focus: "Short-duration psychedelic therapies designed for in-clinic administration.",
+    focus: "Neuro-biotechnology company developing first-in-class psilocybin-inspired therapies to reset neural networks and address demoralization syndrome in patients with life-altering diseases.",
     status: "active",
+    website: "https://www.resetpharma.com/",
   },
   {
     name: "Nanopsy",
