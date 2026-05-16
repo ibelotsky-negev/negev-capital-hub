@@ -172,17 +172,30 @@ const PortfolioSection = () => {
                   {company.note && (
                     <p className="mt-3 text-xs font-medium text-foreground/80">{company.note}</p>
                   )}
-                  {company.website && (
-                    <a
-                      href={company.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      Visit website
-                      <ExternalLink className="h-3 w-3" />
-                    </a>
-                  )}
+                  <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+                    {company.website && (
+                      <a
+                        href={company.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        Visit website
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
+                    {company.dealUrl && (
+                      <a
+                        href={company.dealUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        Deal announcement
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             );
