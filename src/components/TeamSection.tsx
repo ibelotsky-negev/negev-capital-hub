@@ -43,69 +43,60 @@ const team: TeamMember[] = [
 ];
 
 const TeamSection = () => {
-  const [selected, setSelected] = useState<TeamMember | null>(null);
-
   return (
     <section id="team" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Team</h2>
-        <p className="mt-3 text-muted-foreground text-lg">Experienced operators and investors in brain health.</p>
+        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">Team</p>
+        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-foreground">
+          Experienced operators and investors in brain health.
+        </h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {team.map((member) => (
-            <Card
-              key={member.name}
-              className="cursor-pointer hover:shadow-md transition-shadow text-center"
-              onClick={() => setSelected(member)}
-            >
-              <CardHeader className="items-center pb-2">
-                <div className="h-[120px] w-[120px] rounded-full overflow-hidden bg-muted">
+            <Card key={member.name} className="flex flex-col">
+              <CardHeader className="items-start pb-4">
+                <div className="h-[112px] w-[112px] rounded-full overflow-hidden bg-muted">
                   <img
                     src={member.photo}
                     alt={`${member.name} headshot`}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover grayscale-[15%]"
                     style={{ objectPosition: member.photoPosition ?? "center" }}
                     loading="lazy"
                   />
                 </div>
               </CardHeader>
-              <CardContent className="space-y-1">
-                <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
-                <p className="text-sm text-muted-foreground">{member.title}</p>
-                <p className="text-sm text-muted-foreground pt-2">{member.shortBio}</p>
+              <CardContent className="flex flex-col flex-1 space-y-3">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground leading-tight">{member.name}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{member.title}</p>
+                </div>
+                <p className="text-sm text-foreground/80 leading-relaxed flex-1">{member.bio}</p>
+                <div className="flex items-center gap-3 pt-2 border-t border-border">
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${member.name} on LinkedIn`}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                    </a>
+                  )}
+                  {member.email && (
+                    <a
+                      href={`mailto:${member.email}`}
+                      aria-label={`Email ${member.name}`}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <Mail className="h-4 w-4" />
+                    </a>
+                  )}
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
-
-      <Dialog open={!!selected} onOpenChange={() => setSelected(null)}>
-        <DialogContent>
-          {selected && (
-            <>
-              <DialogHeader>
-                <div className="flex items-center gap-4">
-                  <div className="h-16 w-16 rounded-full overflow-hidden bg-muted shrink-0">
-                    <img src={selected.photo} alt={`${selected.name} headshot`} className="h-full w-full object-cover" style={{ objectPosition: selected.photoPosition ?? "center" }} />
-                  </div>
-                  <div className="text-left">
-                    <DialogTitle>{selected.name}</DialogTitle>
-                    <DialogDescription>{selected.title}</DialogDescription>
-                  </div>
-                </div>
-              </DialogHeader>
-              <p className="text-sm text-muted-foreground leading-relaxed">{selected.fullBio}</p>
-              <div className="flex items-center gap-4 pt-2">
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a href="mailto:info@negevcap.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="h-5 w-5" />
-                </a>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };
