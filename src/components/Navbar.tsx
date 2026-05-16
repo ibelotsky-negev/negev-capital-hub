@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import negevLogo from "@/assets/negev-capital-logo.png";
 
 const navLinks = [
   { label: "Thesis", href: "#thesis" },
@@ -17,8 +18,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
-        <a href="#" className="text-xl font-semibold tracking-tight text-foreground">
-          Negev Capital
+        <a href="#" aria-label="Negev Capital" className="flex items-center">
+          <img src={negevLogo} alt="Negev Capital" className="h-10 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
