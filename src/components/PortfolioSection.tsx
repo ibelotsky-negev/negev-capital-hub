@@ -16,7 +16,7 @@ interface Company {
 }
 
 const companyLogos: Record<string, string> = {
-  "Gilgamesh Pharmaceuticals": "/logos/gilgamesh.jpg",
+  "Gilgamesh Pharmaceuticals": "/logos/gilgamesh.png",
   "Mindset Pharma": "/logos/mindset.png",
   "Bright Minds Biosciences": "/logos/brightminds.png",
   "Awakn Life Sciences": "/logos/solvonis.png",
