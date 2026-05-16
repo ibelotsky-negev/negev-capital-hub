@@ -253,13 +253,13 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-warm-gray">
       <div className="container mx-auto px-6">
-        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">Portfolio</p>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-foreground max-w-3xl">
+        <p className="eyebrow">Portfolio</p>
+        <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground max-w-3xl">
           14 companies across the CNS therapeutics landscape.
         </h2>
 
-        <div className="mt-8 border-b border-border">
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+        <div className="mt-8 border-b border-border overflow-x-auto">
+          <div className="flex items-center gap-x-8 min-w-max">
             {filterOptions.map((opt) => {
               const active = filter === opt.value;
               return (
@@ -314,7 +314,7 @@ const PortfolioSection = () => {
                       className={cn(
                         "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
                         config.accent
-                          ? "border-[hsl(40_60%_45%)] text-[hsl(40_60%_35%)]"
+                          ? "border-accent-gold text-accent-gold"
                           : "border-border text-foreground/70",
                       )}
                     >

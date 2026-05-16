@@ -2,11 +2,9 @@ const ThesisSection = () => {
   return (
     <section id="thesis" className="py-20 md:py-28 bg-background border-t border-border">
       <div className="container mx-auto px-6">
-        <p className="text-sm font-semibold tracking-[0.18em] text-muted-foreground uppercase">
-          Our Thesis
-        </p>
+        <p className="eyebrow">Our Thesis</p>
         <div className="mt-6 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
             A conviction in neuropsychiatric innovation, validated by outcomes.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">

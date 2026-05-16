@@ -5,6 +5,8 @@ import ExitsSection from "@/components/ExitsSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TeamSection from "@/components/TeamSection";
 import NegevLabsSection from "@/components/NegevLabsSection";
+import PressSection from "@/components/PressSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,6 +20,8 @@ const Index = () => {
       <PortfolioSection />
       <TeamSection />
       <NegevLabsSection />
+      <PressSection />
+      <ContactSection />
       <Footer />
     </div>
   );

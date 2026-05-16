@@ -31,10 +31,8 @@ const ExitsSection = () => {
   return (
     <section id="exits" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-6">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          Outcomes
-        </p>
-        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-foreground">Realized Exits</h2>
+        <p className="eyebrow">Outcomes</p>
+        <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground">Realized Exits</h2>
         <p className="mt-3 text-muted-foreground text-lg max-w-2xl">
           Demonstrated outcomes for our investors — strategic acquisitions by global pharmaceutical leaders.
         </p>
