@@ -31,12 +31,6 @@ const labs: Lab[] = [
       { label: "Indication", value: "Apathy in Parkinson's / late-life depression" },
     ],
   },
-  {
-    name: "Pipeline Asset",
-    description:
-      "Future CNS venture studio company currently in development. Details to be announced.",
-    badge: "Stealth Mode",
-  },
 ];
 
 const NegevLabsSection = () => {
