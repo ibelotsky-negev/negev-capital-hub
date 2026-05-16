@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import negevLogo from "@/assets/negev-capital-logo.png";
+import negevLogoSvg from "@/assets/negev-capital-logo.svg?raw";
 
 const navLinks = [
   { label: "Thesis", href: "#thesis" },
@@ -18,9 +18,12 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
-        <a href="#" aria-label="Negev Capital" className="flex items-center">
-          <img src={negevLogo} alt="Negev Capital" className="h-12 md:h-14 w-auto" />
-        </a>
+        <a
+          href="#"
+          aria-label="Negev Capital"
+          className="flex items-center text-foreground [&_svg]:h-7 md:[&_svg]:h-8 [&_svg]:w-auto"
+          dangerouslySetInnerHTML={{ __html: negevLogoSvg }}
+        />
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
