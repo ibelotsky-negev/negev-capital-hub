@@ -60,7 +60,7 @@ const TeamSection = () => {
         <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground">
           Experienced operators and investors in brain health.
         </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member) => (
             <Card key={member.name} className="flex flex-col">
               <CardHeader className="items-start pb-4">
