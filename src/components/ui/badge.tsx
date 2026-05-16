@@ -15,6 +15,7 @@ const badgeVariants = cva(
         exit: "border-transparent bg-status-exit/15 text-status-exit",
         active: "border-transparent bg-status-active/15 text-status-active",
         labs: "border-transparent bg-status-labs/15 text-status-labs",
+        merged: "border-transparent bg-muted text-foreground",
       },
     },
     defaultVariants: {

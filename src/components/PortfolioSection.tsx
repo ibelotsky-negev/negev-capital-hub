@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink } from "lucide-react";
 
-type Status = "exit" | "active" | "labs";
+type Status = "exit" | "active" | "labs" | "merged";
 
 interface Company {
   name: string;
@@ -40,14 +40,14 @@ const companies: Company[] = [
   {
     name: "Awakn Life Sciences",
     focus: "Therapeutics for substance and behavioral addictions, with a focus on Alcohol Use Disorder.",
-    status: "exit",
+    status: "merged",
     website: "https://www.solvonis.com/",
     note: "Merged with Solvonis Therapeutics",
   },
   {
     name: "Beckley Psytech",
     focus: "Clinical-stage psychedelic medicines for neurological and psychiatric disorders.",
-    status: "exit",
+    status: "merged",
     website: "https://atai.life/",
     note: "Merged with atai Life Sciences",
   },
@@ -131,16 +131,18 @@ const companies: Company[] = [
   },
 ];
 
-const statusConfig: Record<Status, { label: string; variant: "exit" | "active" | "labs" }> = {
+const statusConfig: Record<Status, { label: string; variant: "exit" | "active" | "labs" | "merged" }> = {
   exit: { label: "Realized Exit", variant: "exit" },
   active: { label: "Active", variant: "active" },
   labs: { label: "Negev Labs", variant: "labs" },
+  merged: { label: "Merged", variant: "merged" },
 };
 
 const filterOptions = [
   { value: "all", label: "All" },
   { value: "active", label: "Active" },
   { value: "exit", label: "Exits" },
+  { value: "merged", label: "Mergers" },
   { value: "labs", label: "Negev Labs" },
 ];
 

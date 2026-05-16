@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 const stats = [
   { value: "$30M+", label: "Fund Size" },
   { value: "Fully Invested", label: "Status" },
-  { value: "2", label: "Realized Exits" },
+  { value: "3", label: "Realized Exits" },
   { value: "8+", label: "Portfolio Companies" },
 ];
 
