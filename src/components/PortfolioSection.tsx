@@ -60,7 +60,7 @@ const companies: Company[] = [
     status: "exit",
     website: "https://www.brightmindsbio.com/",
     note: "Public market (Nasdaq: DRUG)",
-    stage: "Public",
+    stage: "Phase 2",
     modality: "Small molecule",
     indication: "Epilepsy / Neuropsychiatry",
     year: "2021",
