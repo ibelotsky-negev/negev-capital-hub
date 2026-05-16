@@ -12,6 +12,7 @@ interface Company {
   status: Status;
   website?: string;
   note?: string;
+  dealUrl?: string;
 }
 
 const companies: Company[] = [
@@ -50,6 +51,14 @@ const companies: Company[] = [
     status: "merged",
     website: "https://atai.life/",
     note: "Merged with atai Life Sciences",
+  },
+  {
+    name: "Filament Health",
+    focus: "GMP manufacturer of natural, standardized psychedelic drug candidates for clinical development.",
+    status: "merged",
+    website: "https://redlighthollandcorp.com/",
+    note: "Merged with Red Light Holland (CSE: TRIP)",
+    dealUrl: "https://www.newsfilecorp.com/release/288047/RETRANSMISSION-Red-Light-Holland-Signs-Definitive-Agreement-with-Filament-Health-to-Expand-Its-Platform-for-Natural-Psychedelic-Drug-Development-and-Microdosing-Innovation",
   },
   // Negev Labs
   {
