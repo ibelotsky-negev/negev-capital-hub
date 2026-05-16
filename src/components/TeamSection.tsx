@@ -28,7 +28,7 @@ const team: TeamMember[] = [
       "Harvard Business School (Leadership Development); Voronezh State University",
       "Based in Cascais, Portugal",
     ],
-    linkedin: "https://www.linkedin.com/in/vadim-uzberg/",
+    linkedin: "https://www.linkedin.com/in/vadim-uzberg-695210/",
   },
   {
     name: "Ken Belotsky",
@@ -44,7 +44,7 @@ const team: TeamMember[] = [
       "Columbia Business School (Executive Education); Business Economics, HSE",
       "Based in Vienna, Austria",
     ],
-    linkedin: "https://www.linkedin.com/in/ken-belotsky/",
+    linkedin: "https://www.linkedin.com/in/ibelotsky/",
   },
   {
     name: "Dr. Stuart Seidman",
@@ -59,7 +59,7 @@ const team: TeamMember[] = [
       "Publications in American Journal of Psychiatry, JAMA, and Biological Psychiatry",
       "Based in New York",
     ],
-    linkedin: "https://www.linkedin.com/in/stuart-seidman/",
+    linkedin: "https://www.linkedin.com/in/stuart-seidman-412b7530/",
   },
   {
     name: "Prof. Bernard Lerer",
@@ -75,7 +75,7 @@ const team: TeamMember[] = [
       "380+ peer-reviewed publications and four books in psychopharmacology and neurogenetics",
       "Based in Jerusalem, Israel",
     ],
-    linkedin: "https://www.linkedin.com/in/bernard-lerer/",
+    linkedin: "https://www.linkedin.com/in/bernardlerer/",
   },
 ];
 
