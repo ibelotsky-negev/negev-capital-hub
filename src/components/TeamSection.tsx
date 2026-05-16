@@ -11,35 +11,36 @@ interface TeamMember {
   title: string;
   photo: string;
   photoPosition?: string;
-  shortBio: string;
-  fullBio: string;
+  bio: string;
+  linkedin?: string;
+  email?: string;
 }
 
 const team: TeamMember[] = [
   {
-    name: "Vadim Uzberg",
-    title: "Partner — Fund Management & LP Relations",
-    photo: vadimPhoto,
-    shortBio: "25+ years in PE & VC across Europe, US, and emerging markets; Co-Founder & MD of Negev Capital.",
-    fullBio:
-      "Vadim Uzberg is Co-Founder and Managing Director of Negev Capital (since 2021), leading fund management and LP relations. He brings 25+ years of private equity and venture capital experience across Europe, the US, and emerging markets. Previously a Partner at Baring Vostok Capital Partners (~$4B AUM), where he spent 15+ years leading healthcare, pharma, and telecoms investments, and Investment Director & CFO at Eagle Venture Partners (EBRD-backed), overseeing fund management across multiple jurisdictions. Vadim completed the Program for Leadership Development at Harvard Business School and holds degrees in Economics and Enterprise Management from Voronezh State University.",
-  },
-  {
     name: "Ken Belotsky",
-    title: "Founding Partner — Business Development",
+    title: "Partner, Business Development · Founding Partner, Negev Labs",
     photo: kenPhoto,
     photoPosition: "center top",
-    shortBio: "Technology entrepreneur and venture investor; Co-Founding Partner at Negev Capital.",
-    fullBio:
-      "Ken Belotsky is a technology entrepreneur and venture investor, Co-Founding Partner at Negev Capital since 2021, and Co-Founder & CEO of Negev Labs — a venture studio developing neuroplasticity-based therapeutics. He previously co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group (2018), and BrightConsult, an automotive software company acquired by Incadea. Ken has led 30+ private investments across the US, Israel, and Europe in biotech, mental health, mobility, and deep tech. He completed executive education at Columbia Business School and studied Business Economics at HSE Moscow.",
+    bio:
+      "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Negev Labs, the fund's CNS venture studio developing neuroplasticity-based therapeutics. Technology entrepreneur and venture investor with 30+ private investments across the US, Israel, and Europe in biotech, mental health, mobility, and deep tech. Previously co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group in 2018, and BrightConsult, an automotive software company acquired by Incadea. Education: Columbia Business School executive education; Business Economics, HSE. Based in Vienna, Austria.",
+    email: "info@negevcap.com",
+  },
+  {
+    name: "Vadim Uzberg",
+    title: "Partner, Fund Management & LP Relations",
+    photo: vadimPhoto,
+    bio:
+      "Co-Founder and Managing Director of Negev Capital since 2021. 25+ years in private equity and venture capital across Europe, the US, and emerging markets. Previously Partner at Baring Vostok Capital Partners (~$4B AUM), where he spent 15+ years leading healthcare, pharma, and telecoms investments, and Investment Director and CFO at Eagle Venture Partners (EBRD-backed), overseeing fund management across multiple jurisdictions. Education: Harvard Business School Program for Leadership Development; degrees in Economics and Enterprise Management, Voronezh State University. Based in Cascais, Portugal.",
+    email: "info@negevcap.com",
   },
   {
     name: "Dr. Stuart Seidman",
-    title: "Partner — Medical Science Lead | Psychiatrist, New York",
+    title: "Partner, Medical Science Lead",
     photo: stuartPhoto,
-    shortBio: "Board-certified psychiatrist and internationally recognised expert in psychopharmacology and neuroendocrinology.",
-    fullBio:
-      "Dr. Stuart Seidman is a board-certified psychiatrist and internationally recognised expert in psychopharmacology and neuroendocrinology. He has served 15+ years as Assistant Professor of Clinical Psychiatry at Columbia University and Assistant Attending Psychiatrist at NY-Presbyterian, and co-directed the Brain-Behavior Clinic at Columbia, with international teaching engagements including Tel Aviv University. A prolific researcher, his work has appeared in the American Journal of Psychiatry, JAMA, and Biological Psychiatry. His clinical expertise spans depression, hormonal regulation, aging, and sexual health, and he is an active contributor to editorial boards and professional societies globally.",
+    bio:
+      "Board-certified psychiatrist and internationally recognized expert in psychopharmacology and neuroendocrinology. 15+ years as Assistant Professor of Clinical Psychiatry at Columbia University and Assistant Attending Psychiatrist at NewYork-Presbyterian. Co-directed the Brain-Behavior Clinic at Columbia, with international teaching appointments including Tel Aviv University. Prolific researcher with publications in American Journal of Psychiatry, JAMA, and Biological Psychiatry. Expert in depression, hormonal regulation, aging, and sexual health. Active contributor to editorial boards and professional societies globally. Based in New York.",
+    email: "info@negevcap.com",
   },
 ];
 
