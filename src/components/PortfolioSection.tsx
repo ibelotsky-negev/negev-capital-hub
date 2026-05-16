@@ -29,6 +29,11 @@ const companyLogos: Record<string, string> = {
   "Freedom Biosciences": "/logos/freedom.png",
   Psylo: "/logos/psylo.png",
   "Delix Therapeutics": "/logos/delix.svg",
+  "MindState Design Labs": "/logos/mindstate.png",
+  "A Better Life Pharma": "/logos/ablp.png",
+  "Reconnect Labs": "/logos/reconnect.png",
+  "Reset Pharma": "/logos/reset.png",
+  "Biomind Labs": "/logos/biomind.png",
 };
 
 const companies: Company[] = [
