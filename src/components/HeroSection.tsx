@@ -53,7 +53,7 @@ const HeroSection = () => {
           {/* Left column - 60% */}
           <div className="lg:col-span-3">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground/60">
-              Biotech Venture Capital
+              Fully Invested · 2 Realized Exits · Cayman-Domiciled
             </p>
             <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
               CNS and brain health therapeutics.
@@ -74,6 +74,22 @@ const HeroSection = () => {
               >
                 <a href="#exits">Our Exits</a>
               </Button>
+            </div>
+            <div className="mt-10 pt-6 border-t border-primary-foreground/10 flex flex-wrap items-center gap-x-3 gap-y-2">
+              <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-primary-foreground/45">
+                Exits to:
+              </span>
+              <span className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">
+                AbbVie
+              </span>
+              <span aria-hidden="true" className="text-primary-foreground/30">·</span>
+              <span className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">
+                Otsuka Pharmaceutical
+              </span>
+              <span aria-hidden="true" className="text-primary-foreground/30">·</span>
+              <span className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">
+                Nasdaq (DRUG)
+              </span>
             </div>
           </div>
 
