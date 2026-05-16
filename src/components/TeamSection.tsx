@@ -46,8 +46,8 @@ const TeamSection = () => {
   return (
     <section id="team" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-6">
-        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">Team</p>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-foreground">
+        <p className="eyebrow">Team</p>
+        <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground">
           Experienced operators and investors in brain health.
         </h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
