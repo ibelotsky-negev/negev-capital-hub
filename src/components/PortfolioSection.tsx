@@ -60,6 +60,14 @@ const companies: Company[] = [
     note: "Merged with Red Light Holland (CSE: TRIP)",
     dealUrl: "https://www.newsfilecorp.com/release/288047/RETRANSMISSION-Red-Light-Holland-Signs-Definitive-Agreement-with-Filament-Health-to-Expand-Its-Platform-for-Natural-Psychedelic-Drug-Development-and-Microdosing-Innovation",
   },
+  {
+    name: "Small Pharma",
+    focus: "Clinical-stage biotech developing short-duration DMT-based psychedelic therapies for depression and anxiety.",
+    status: "merged",
+    website: "https://www.cybin.com/",
+    note: "Merged with Helus Pharma (formerly Cybin)",
+    dealUrl: "https://www.businesswire.com/news/home/20230828350890/en/Cybin-to-Acquire-Small-Pharma-Inc.",
+  },
   // Negev Labs
   {
     name: "Negev Labs",
@@ -68,6 +76,19 @@ const companies: Company[] = [
     website: "https://negevcap.com/",
   },
   // Active portfolio
+  {
+    name: "Helus Pharma",
+    focus: "Clinical-stage neuropsychiatry company (formerly Cybin) advancing novel serotonergic agonists for major depressive disorder and generalized anxiety disorder.",
+    status: "active",
+    website: "https://www.cybin.com/",
+    note: "Nasdaq: HELP",
+  },
+  {
+    name: "Freedom Biosciences",
+    focus: "Clinical-stage biotech platform developing next-generation ketamine and psychedelic therapeutics for treatment-resistant depression.",
+    status: "active",
+    website: "https://freedombio.co/",
+  },
   {
     name: "Biomind Labs",
     focus: "Novel pharmaceutical formulations of DMT, 5-MeO-DMT and mescaline for CNS disorders.",
@@ -109,11 +130,6 @@ const companies: Company[] = [
     focus: "Neuro-biotechnology company developing first-in-class psilocybin-inspired therapies to reset neural networks and address demoralization syndrome in patients with life-altering diseases.",
     status: "active",
     website: "https://www.resetpharma.com/",
-  },
-  {
-    name: "Nanopsy",
-    focus: "Nanotechnology-based delivery systems for psychedelic therapeutics.",
-    status: "active",
   },
 ];
 
