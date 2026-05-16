@@ -336,10 +336,8 @@ const PortfolioSection = () => {
                     <CardTitle className="text-base leading-tight">{company.name}</CardTitle>
                     <span
                       className={cn(
-                        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
-                        config.accent
-                          ? "border-accent-gold text-accent-gold"
-                          : "border-border text-foreground/70",
+                        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider",
+                        statusClasses[config.style],
                       )}
                     >
                       {config.label}
