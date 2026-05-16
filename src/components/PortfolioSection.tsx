@@ -62,9 +62,9 @@ const companies: Company[] = [
   {
     name: "Bright Minds Biosciences",
     focus: "Selective serotonin receptor agonists for epilepsy and neuropsychiatric disorders.",
-    status: "liquidity",
+    status: "exit",
     website: "https://www.brightmindsbio.com/",
-    note: "Public market (Nasdaq: DRUG)",
+    note: "Public-market exit · Nasdaq: DRUG · 2024",
     stage: "Phase 2",
     modality: "Small molecule",
     indication: "Epilepsy / Neuropsychiatry",
