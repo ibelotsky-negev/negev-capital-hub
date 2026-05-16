@@ -46,6 +46,16 @@ const NegevLabsSection = () => {
           them into capital-efficient companies, and targets pharma licensing on accelerated
           timelines. The studio model is designed to deliver founder-level returns to our investors.
         </p>
+        <p className="mt-4 text-[15px] md:text-base max-w-3xl">
+          <a
+            href="https://negevlabs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground underline underline-offset-4 hover:text-foreground/70 transition-colors"
+          >
+            Visit Negev Labs &rarr;
+          </a>
+        </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
           {labs.map((lab) => (
