@@ -3,6 +3,7 @@ import { Linkedin, Mail } from "lucide-react";
 import vadimPhoto from "@/assets/team/vadim.jpg";
 import kenPhoto from "@/assets/team/ken.jpg";
 import stuartPhoto from "@/assets/team/stuart.jpg";
+import bernardPhoto from "@/assets/team/bernard.jpg";
 
 interface TeamMember {
   name: string;
@@ -40,6 +41,15 @@ const team: TeamMember[] = [
       "Board-certified psychiatrist and internationally recognized expert in psychopharmacology and neuroendocrinology. 15+ years as Assistant Professor of Clinical Psychiatry at Columbia University and Assistant Attending Psychiatrist at NewYork-Presbyterian. Co-directed the Brain-Behavior Clinic at Columbia, with international teaching appointments including Tel Aviv University. Prolific researcher with publications in American Journal of Psychiatry, JAMA, and Biological Psychiatry. Expert in depression, hormonal regulation, aging, and sexual health. Active contributor to editorial boards and professional societies globally. Based in New York.",
     email: "info@negevcap.com",
   },
+  {
+    name: "Prof. Bernard Lerer",
+    title: "Chief of Scientific Advisory Board",
+    photo: bernardPhoto,
+    photoPosition: "center top",
+    bio:
+      "Professor of Psychiatry and Founder of the Biological Psychiatry Laboratory at Hadassah – Hebrew University Medical Center. Trained at the University of Cape Town, Hadassah and Herzog Hospitals, and Lafayette Clinic – Wayne State University. Former Director of the National Institute for Psychobiology in Israel and Founding Editor-in-Chief of the International Journal of Neuropsychopharmacology. Recipient of the A.E. Bennet Award (US Society for Biological Psychiatry) and Lifetime Achievement Awards from the Israel Psychiatric Association and the International Society for Affective Disorders; Fellow of the American College of Neuropsychopharmacology. Research expertise in behavioral and biochemical psychopharmacology, molecular neurobiology, and neurogenetics, with 380+ peer-reviewed publications and four books. Based in Jerusalem, Israel.",
+    email: "info@negevcap.com",
+  },
 ];
 
 const TeamSection = () => {
@@ -50,7 +60,7 @@ const TeamSection = () => {
         <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground">
           Experienced operators and investors in brain health.
         </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member) => (
             <Card key={member.name} className="flex flex-col">
               <CardHeader className="items-start pb-4">
