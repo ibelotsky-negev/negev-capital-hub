@@ -279,7 +279,7 @@ const PortfolioSection = () => {
       <div className="container mx-auto px-6">
         <p className="eyebrow">Portfolio</p>
         <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground max-w-3xl">
-          14 companies across the CNS therapeutics landscape.
+          16 companies across the CNS therapeutics landscape.
         </h2>
 
         <div className="mt-8 border-b border-border overflow-x-auto">
