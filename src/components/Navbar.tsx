@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
+  { label: "Thesis", href: "#thesis" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Exits", href: "#exits" },
   { label: "Team", href: "#team" },
