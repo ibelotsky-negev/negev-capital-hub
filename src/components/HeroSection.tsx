@@ -53,14 +53,14 @@ const HeroSection = () => {
           {/* Left column - 60% */}
           <div className="lg:col-span-3">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground/60">
-              Fully Invested · 2 Realized Exits · Cayman-Domiciled
+              Fully Invested · 3 Realized Exits
             </p>
             <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
               CNS and brain health therapeutics.
               <span className="block text-primary-foreground/70 font-light">Fully invested. Realized.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base md:text-lg text-primary-foreground/70 leading-relaxed">
-              Negev Capital is a $30M+ biotech venture fund. Our portfolio includes the AbbVie acquisition of Gilgamesh Pharmaceuticals (up to $1.2B, 2025) and the Otsuka acquisition of Mindset Pharma (2023). Today we continue building through Negev Labs, our CNS venture studio.
+              Negev Capital is a $30M+ biotech venture fund. Our realized exits include the AbbVie acquisition of Gilgamesh Pharmaceuticals (up to $1.2B, 2025), the Otsuka acquisition of Mindset Pharma (2023), and the public-market exit of Bright Minds Biosciences (Nasdaq: DRUG, 2024). Today we continue building through Negev Labs, our CNS venture studio.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" variant="secondary" className="font-medium">
@@ -88,7 +88,7 @@ const HeroSection = () => {
               </span>
               <span aria-hidden="true" className="text-primary-foreground/30">·</span>
               <span className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">
-                Nasdaq (DRUG)
+                Public Markets (Nasdaq)
               </span>
             </div>
           </div>
