@@ -258,8 +258,13 @@ const PortfolioSection = () => {
           14 companies across the CNS therapeutics landscape.
         </h2>
 
-        <div className="mt-8 border-b border-border">
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+        <p className="eyebrow">Portfolio</p>
+        <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground max-w-3xl">
+          14 companies across the CNS therapeutics landscape.
+        </h2>
+
+        <div className="mt-8 border-b border-border overflow-x-auto">
+          <div className="flex items-center gap-x-8 min-w-max">
             {filterOptions.map((opt) => {
               const active = filter === opt.value;
               return (
