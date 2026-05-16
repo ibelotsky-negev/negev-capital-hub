@@ -314,7 +314,7 @@ const PortfolioSection = () => {
                       className={cn(
                         "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
                         config.accent
-                          ? "border-[hsl(40_60%_45%)] text-[hsl(40_60%_35%)]"
+                          ? "border-accent-gold text-accent-gold"
                           : "border-border text-foreground/70",
                       )}
                     >
