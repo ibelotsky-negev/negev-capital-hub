@@ -48,6 +48,11 @@ const Footer = () => {
                   Disclosures
                 </Link>
               </li>
+              <li>
+                <p className="text-xs text-muted-foreground/70 leading-relaxed">
+                  Fund administration, audit, and counsel details available to qualified institutional investors under NDA.
+                </p>
+              </li>
             </ul>
           </div>
 
