@@ -49,7 +49,7 @@ const companies: Company[] = [
     status: "exit",
     website: "https://www.mindsetpharma.com/",
     note: "Acquired by Otsuka",
-    stage: "Acquired",
+    stage: "Preclinical",
     modality: "Small molecule",
     indication: "Neuropsychiatric",
     year: "2021",
