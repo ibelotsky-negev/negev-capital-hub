@@ -23,7 +23,7 @@ const companyLogos: Record<string, string> = {
   "Beckley Psytech": "/logos/beckley.svg",
   "Filament Health": "/logos/filament.svg",
   "Small Pharma": "/logos/helus.png",
-  "Negev Labs": "/logos/negevlabs.svg",
+  "Negev Labs": "/logos/negevlabs.png",
   "Helus Pharma": "/logos/helus.png",
   "Freedom Biosciences": "/logos/freedom.png",
   "Biomind Labs": "/logos/biomind.png",
