@@ -5,7 +5,6 @@ import ExitsSection from "@/components/ExitsSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TeamSection from "@/components/TeamSection";
 import NegevLabsSection from "@/components/NegevLabsSection";
-import FundStats from "@/components/FundStats";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,7 +14,7 @@ const Index = () => {
       <HeroSection />
       <ThesisSection />
       <ExitsSection />
-      <FundStats />
+      <div className="border-t border-border" aria-hidden="true" />
       <PortfolioSection />
       <TeamSection />
       <NegevLabsSection />
