@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type Status = "exit" | "active" | "merged";
+type Status = "exit" | "active" | "merged" | "liquidity";
 
 interface Company {
   name: string;
@@ -57,7 +57,7 @@ const companies: Company[] = [
   {
     name: "Bright Minds Biosciences",
     focus: "Selective serotonin receptor agonists for epilepsy and neuropsychiatric disorders.",
-    status: "exit",
+    status: "liquidity",
     website: "https://www.brightmindsbio.com/",
     note: "Public market (Nasdaq: DRUG)",
     stage: "Phase 2",
@@ -71,8 +71,10 @@ const companies: Company[] = [
     status: "merged",
     website: "https://www.solvonis.com/",
     note: "Merged with Solvonis Therapeutics",
+    stage: "Phase 2",
     modality: "Small molecule",
     indication: "Alcohol Use Disorder",
+    year: "2021",
   },
   {
     name: "Beckley Psytech",
@@ -83,6 +85,7 @@ const companies: Company[] = [
     stage: "Phase 2",
     modality: "Psychedelic",
     indication: "Treatment-resistant depression",
+    year: "2021",
   },
   {
     name: "Filament Health",
@@ -92,8 +95,10 @@ const companies: Company[] = [
     note: "Merged with Red Light Holland (CSE: TRIP)",
     dealUrl:
       "https://www.newsfilecorp.com/release/288047/RETRANSMISSION-Red-Light-Holland-Signs-Definitive-Agreement-with-Filament-Health-to-Expand-Its-Platform-for-Natural-Psychedelic-Drug-Development-and-Microdosing-Innovation",
+    stage: "Preclinical",
     modality: "Botanical psychedelics",
     indication: "Substance Use Disorders",
+    year: "2021",
   },
   {
     name: "Small Pharma",
@@ -105,6 +110,7 @@ const companies: Company[] = [
     stage: "Phase 2",
     modality: "DMT",
     indication: "Depression / Anxiety",
+    year: "2021",
   },
   {
     name: "Helus Pharma",
@@ -116,6 +122,7 @@ const companies: Company[] = [
     stage: "Phase 2",
     modality: "Serotonergic agonist",
     indication: "MDD / GAD",
+    year: "2021",
   },
   {
     name: "Freedom Biosciences",
@@ -126,6 +133,7 @@ const companies: Company[] = [
     stage: "Phase 1",
     modality: "Ketamine / psychedelic",
     indication: "Treatment-resistant depression",
+    year: "2021",
   },
   {
     name: "Biomind Labs",
@@ -135,6 +143,7 @@ const companies: Company[] = [
     stage: "Preclinical",
     modality: "DMT / 5-MeO-DMT",
     indication: "CNS disorders",
+    year: "2021",
   },
   {
     name: "Psylo",
@@ -144,6 +153,7 @@ const companies: Company[] = [
     stage: "Preclinical",
     modality: "Non-hallucinogenic 5-HT2A",
     indication: "Depression",
+    year: "2022",
   },
   {
     name: "Delix Therapeutics",
@@ -153,6 +163,7 @@ const companies: Company[] = [
     stage: "Phase 1",
     modality: "Neuroplastogen",
     indication: "Depression / Neurodegeneration",
+    year: "2021",
   },
   {
     name: "MindState Design Labs",
@@ -162,6 +173,7 @@ const companies: Company[] = [
     stage: "Preclinical",
     modality: "Serotonergic psychedelic",
     indication: "Neuropsychiatric",
+    year: "2022",
   },
   {
     name: "A Better Life Pharma",
@@ -171,6 +183,7 @@ const companies: Company[] = [
     stage: "Preclinical",
     modality: "Psychedelic / analgesic",
     indication: "Mental health / Pain",
+    year: "2021",
   },
   {
     name: "Reconnect Labs",
@@ -181,6 +194,7 @@ const companies: Company[] = [
     stage: "Preclinical",
     modality: "Precision neuropsychiatry",
     indication: "Insomnia / Anxiety / SUD",
+    year: "2022",
   },
   {
     name: "Reset Pharma",
@@ -191,13 +205,23 @@ const companies: Company[] = [
     stage: "Preclinical",
     modality: "Psilocybin-inspired",
     indication: "Demoralization syndrome",
+    year: "2022",
   },
 ];
 
-const statusConfig: Record<Status, { label: string; accent: boolean }> = {
-  exit: { label: "Realized Exit", accent: true },
-  active: { label: "Active", accent: false },
-  merged: { label: "Merged", accent: false },
+type StatusStyle = "exitFilled" | "liquidity" | "merged" | "active";
+const statusConfig: Record<Status, { label: string; style: StatusStyle }> = {
+  exit: { label: "Realized Exit", style: "exitFilled" },
+  liquidity: { label: "Liquidity Event", style: "liquidity" },
+  active: { label: "Active", style: "active" },
+  merged: { label: "Merged", style: "merged" },
+};
+
+const statusClasses: Record<StatusStyle, string> = {
+  exitFilled: "bg-accent-gold text-white border-transparent",
+  liquidity: "border-transparent bg-blue-100 text-blue-800",
+  merged: "border-border text-foreground/70",
+  active: "border-transparent bg-muted text-muted-foreground",
 };
 
 const filterOptions = [
@@ -255,7 +279,7 @@ const PortfolioSection = () => {
       <div className="container mx-auto px-6">
         <p className="eyebrow">Portfolio</p>
         <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground max-w-3xl">
-          14 companies across the CNS therapeutics landscape.
+          16 companies across the CNS therapeutics landscape.
         </h2>
 
         <div className="mt-8 border-b border-border overflow-x-auto">
@@ -312,10 +336,8 @@ const PortfolioSection = () => {
                     <CardTitle className="text-base leading-tight">{company.name}</CardTitle>
                     <span
                       className={cn(
-                        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
-                        config.accent
-                          ? "border-accent-gold text-accent-gold"
-                          : "border-border text-foreground/70",
+                        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider",
+                        statusClasses[config.style],
                       )}
                     >
                       {config.label}

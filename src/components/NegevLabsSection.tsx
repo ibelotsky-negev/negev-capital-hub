@@ -31,12 +31,6 @@ const labs: Lab[] = [
       { label: "Indication", value: "Apathy in Parkinson's / late-life depression" },
     ],
   },
-  {
-    name: "Pipeline Asset",
-    description:
-      "Future CNS venture studio company currently in development. Details to be announced.",
-    badge: "Stealth Mode",
-  },
 ];
 
 const NegevLabsSection = () => {
@@ -53,7 +47,7 @@ const NegevLabsSection = () => {
           timelines. The studio model is designed to deliver founder-level returns to our investors.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
           {labs.map((lab) => (
             <Card
               key={lab.name}

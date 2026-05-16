@@ -65,6 +65,11 @@ const ExitsSection = () => {
                 <div className="mt-6 pb-6 border-b border-exit-border/60">
                   <p className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
                     {exit.dealValue}
+                    {exit.company === "Gilgamesh Pharmaceuticals" && (
+                      <span className="ml-2 text-xs font-normal text-muted-foreground tracking-normal align-middle">
+                        (upfront + milestones)
+                      </span>
+                    )}
                   </p>
                   <p className="mt-2 text-sm font-medium text-muted-foreground">
                     {exit.subline}
