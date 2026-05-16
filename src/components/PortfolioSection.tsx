@@ -93,7 +93,7 @@ const companies: Company[] = [
     name: "Negev Labs",
     focus: "Venture studio building next-generation CNS and brain-health therapeutics from inception.",
     status: "labs",
-    website: "https://negevcap.com/",
+    website: "https://www.negevlabs.com/",
   },
   // Active portfolio
   {
