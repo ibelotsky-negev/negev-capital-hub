@@ -38,7 +38,7 @@ const companies: Company[] = [
     status: "exit",
     website: "https://www.gilgameshpharmaceutical.com/",
     note: "Acquired by AbbVie",
-    stage: "Acquired",
+    stage: "Phase 2",
     modality: "Small molecule",
     indication: "Major Depressive Disorder",
     year: "2022",
