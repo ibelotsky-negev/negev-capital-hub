@@ -25,9 +25,9 @@ const team: TeamMember[] = [
   },
   {
     name: "Ken Belotsky",
-    title: "Partner — Business Development | CEO, Negev Labs",
+    title: "Founding Partner — Business Development",
     photo: kenPhoto,
-    shortBio: "Technology entrepreneur and venture investor; Co-Founding Partner at Negev Capital and CEO of Negev Labs.",
+    shortBio: "Technology entrepreneur and venture investor; Co-Founding Partner at Negev Capital.",
     fullBio:
       "Ken Belotsky is a technology entrepreneur and venture investor, Co-Founding Partner at Negev Capital since 2021, and Co-Founder & CEO of Negev Labs — a venture studio developing neuroplasticity-based therapeutics. He previously co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group (2018), and BrightConsult, an automotive software company acquired by Incadea. Ken has led 30+ private investments across the US, Israel, and Europe in biotech, mental health, mobility, and deep tech. He completed executive education at Columbia Business School and studied Business Economics at HSE Moscow.",
   },
