@@ -4,7 +4,7 @@ const heroStats = [
   { value: "$30M+", label: "Fund Size" },
   { value: "2021", label: "Vintage" },
   { value: "16", label: "Portfolio Companies" },
-  { value: "2", label: "Realized Exits" },
+  { value: "3", label: "Realized Exits" },
   { value: "Fully Invested", label: "Status" },
   { value: "Cayman Islands", label: "Domicile" },
   { value: "CNS / Brain Health · Seed–Series A", label: "Strategy" },
