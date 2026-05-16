@@ -16,20 +16,20 @@ interface TeamMember {
 
 const team: TeamMember[] = [
   {
+    name: "Vadim Uzberg",
+    title: "Partner, Fund Management & LP Relations",
+    photo: vadimPhoto,
+    bio:
+      "Co-Founder and Managing Director of Negev Capital since 2021. 25+ years in private equity and venture capital across Europe, the US, and emerging markets. Previously Partner at Baring Vostok Capital Partners (~$4B AUM), where he spent 15+ years leading healthcare, pharma, and telecoms investments, and Investment Director and CFO at Eagle Venture Partners (EBRD-backed), overseeing fund management across multiple jurisdictions. Education: Harvard Business School Program for Leadership Development; degrees in Economics and Enterprise Management, Voronezh State University. Based in Cascais, Portugal.",
+    email: "info@negevcap.com",
+  },
+  {
     name: "Ken Belotsky",
     title: "Partner, Business Development · Founding Partner, Negev Labs",
     photo: kenPhoto,
     photoPosition: "center top",
     bio:
       "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Negev Labs, the fund's CNS venture studio developing neuroplasticity-based therapeutics. Technology entrepreneur and venture investor with 30+ private investments across the US, Israel, and Europe in biotech, mental health, mobility, and deep tech. Previously co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group in 2018, and BrightConsult, an automotive software company acquired by Incadea. Education: Columbia Business School executive education; Business Economics, HSE. Based in Vienna, Austria.",
-    email: "info@negevcap.com",
-  },
-  {
-    name: "Vadim Uzberg",
-    title: "Partner, Fund Management & LP Relations",
-    photo: vadimPhoto,
-    bio:
-      "Co-Founder and Managing Director of Negev Capital since 2021. 25+ years in private equity and venture capital across Europe, the US, and emerging markets. Previously Partner at Baring Vostok Capital Partners (~$4B AUM), where he spent 15+ years leading healthcare, pharma, and telecoms investments, and Investment Director and CFO at Eagle Venture Partners (EBRD-backed), overseeing fund management across multiple jurisdictions. Education: Harvard Business School Program for Leadership Development; degrees in Economics and Enterprise Management, Voronezh State University. Based in Cascais, Portugal.",
     email: "info@negevcap.com",
   },
   {
