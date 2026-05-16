@@ -3,6 +3,7 @@ import { Linkedin, Mail } from "lucide-react";
 import vadimPhoto from "@/assets/team/vadim.jpg";
 import kenPhoto from "@/assets/team/ken.jpg";
 import stuartPhoto from "@/assets/team/stuart.jpg";
+import bernardPhoto from "@/assets/team/bernard.jpg";
 
 interface TeamMember {
   name: string;
