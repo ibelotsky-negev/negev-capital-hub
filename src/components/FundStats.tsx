@@ -4,7 +4,7 @@ const stats = [
   { value: "$30M+", label: "Fund Size" },
   { value: "Fully Invested", label: "Status" },
   { value: "3", label: "Realized Exits" },
-  { value: "8+", label: "Portfolio Companies" },
+  { value: "14", label: "Portfolio Companies" },
 ];
 
 const FundStats = () => {
