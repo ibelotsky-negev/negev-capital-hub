@@ -60,6 +60,7 @@ export default {
         "status-active": "hsl(var(--status-active))",
         "status-exit": "hsl(var(--status-exit))",
         "status-labs": "hsl(var(--status-labs))",
+        "accent-gold": "hsl(var(--accent-gold))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
