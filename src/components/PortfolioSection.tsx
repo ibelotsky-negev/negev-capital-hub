@@ -175,8 +175,31 @@ const PortfolioSection = () => {
             return (
               <Card key={`${company.name}-${i}`} className="hover:shadow-md transition-shadow flex flex-col">
                 <CardHeader className="flex flex-row items-start gap-4">
-                  <div className="h-12 w-12 rounded bg-muted flex items-center justify-center shrink-0">
-                    <span className="text-[10px] text-muted-foreground">Logo</span>
+                  <div className="h-12 w-12 rounded bg-white border border-border flex items-center justify-center shrink-0 overflow-hidden p-1.5">
+                    {company.website ? (
+                      <img
+                        src={`https://logo.clearbit.com/${new URL(company.website).hostname.replace(/^www\./, "")}`}
+                        alt={`${company.name} logo`}
+                        loading="lazy"
+                        className="max-h-full max-w-full object-contain"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          target.style.display = "none";
+                          const fallback = target.nextElementSibling as HTMLElement | null;
+                          if (fallback) fallback.style.display = "block";
+                        }}
+                      />
+                    ) : null}
+                    <span
+                      className="text-[10px] text-muted-foreground"
+                      style={{ display: company.website ? "none" : "block" }}
+                    >
+                      {company.name
+                        .split(" ")
+                        .slice(0, 2)
+                        .map((w) => w[0])
+                        .join("")}
+                    </span>
                   </div>
                   <div className="space-y-1.5 min-w-0">
                     <CardTitle className="text-base leading-tight">{company.name}</CardTitle>
