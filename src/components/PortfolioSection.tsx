@@ -22,7 +22,7 @@ const companyLogos: Record<string, string> = {
   "Gilgamesh Pharmaceuticals": "/logos/gilgamesh.png",
   "Mindset Pharma": "/logos/mindset.png",
   "Bright Minds Biosciences": "/logos/brightminds.png",
-  "Awakn Life Sciences": "/logos/solvonis.png",
+  
   "Beckley Psytech": "/logos/beckley.svg",
   "Filament Health": "/logos/filament.svg",
   "Helus Pharma": "/logos/helus.png",

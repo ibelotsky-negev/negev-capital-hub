@@ -57,7 +57,7 @@ const NegevLabsSection = () => {
           </a>
         </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
+        <div className="mt-12 grid grid-cols-1 gap-8 max-w-xl">
           {labs.map((lab) => (
             <Card
               key={lab.name}

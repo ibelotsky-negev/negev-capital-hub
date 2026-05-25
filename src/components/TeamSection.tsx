@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
-import vadimPhoto from "@/assets/team/vadim.jpg";
-import kenPhoto from "@/assets/team/ken.jpg";
-import stuartPhoto from "@/assets/team/stuart.jpg";
-import bernardPhoto from "@/assets/team/bernard.jpg";
+import vadimPhoto from "@/assets/team/vadim.webp";
+import kenPhoto from "@/assets/team/ken.webp";
+import stuartPhoto from "@/assets/team/stuart.webp";
+import bernardPhoto from "@/assets/team/bernard.webp";
 
 interface TeamMember {
   name: string;
@@ -32,7 +32,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Ken Belotsky",
-    title: "Partner · Founding Partner, Negev Labs",
+    title: "Partner, Founding Partner, Negev Labs",
     photo: kenPhoto,
     photoPosition: "center top",
     headline:
