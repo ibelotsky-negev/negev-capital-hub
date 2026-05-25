@@ -18,7 +18,7 @@ interface TeamMember {
 const team: TeamMember[] = [
   {
     name: "Vadim Uzberg",
-    title: "Partner, Fund Management & LP Relations",
+    title: "Partner, Fund Management",
     photo: vadimPhoto,
     headline: "Co-Founder and Managing Director of Negev Capital since 2021.",
     credentials: [
@@ -32,7 +32,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Ken Belotsky",
-    title: "Partner, Founding Partner, Negev Labs",
+    title: "Partner",
     photo: kenPhoto,
     photoPosition: "center top",
     headline:
