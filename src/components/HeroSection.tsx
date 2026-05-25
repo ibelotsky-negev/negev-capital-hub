@@ -52,10 +52,7 @@ const HeroSection = () => {
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16 lg:items-center">
           {/* Left column - 60% */}
           <div className="lg:col-span-3">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground/60">
-              Fully Invested · 3 Realized Exits
-            </p>
-            <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
               CNS and brain health therapeutics.
               <span className="block text-primary-foreground/70 font-light">Fully invested. Realized.</span>
             </h1>
