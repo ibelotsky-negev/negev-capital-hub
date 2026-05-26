@@ -25,7 +25,7 @@ const press: PressItem[] = [
   },
   {
     outlet: "Endpoints News",
-    date: "March 2021",
+    date: "December 2024",
     headline:
       "Negev Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
     url: "https://endpoints.news/negev-labs-debuts-with-30m-in-assets-striving-to-build-a-network-of-psychedelic-biotechs/",
