@@ -98,9 +98,9 @@ const HeroSection = () => {
               </p>
               <dl className="divide-y divide-primary-foreground/10">
                 {heroStats.map((stat) => (
-                  <div key={stat.label} className="flex items-baseline justify-between py-3.5 first:pt-0 last:pb-0">
-                    <dt className="text-sm text-primary-foreground/65">{stat.label}</dt>
-                    <dd className="text-lg md:text-xl font-semibold tracking-tight">{stat.value}</dd>
+                  <div key={stat.label} className="flex items-baseline justify-between gap-4 py-3.5 first:pt-0 last:pb-0">
+                    <dt className="shrink-0 text-sm text-primary-foreground/65">{stat.label}</dt>
+                    <dd className="text-right text-lg md:text-xl font-semibold tracking-tight">{stat.value}</dd>
                   </div>
                 ))}
               </dl>
