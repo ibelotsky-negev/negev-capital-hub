@@ -26,7 +26,7 @@ const team: TeamMember[] = [
       "Former Partner at Baring Vostok Capital Partners (~$4B AUM)",
       "Former Investment Director and CFO at Eagle Venture Partners (EBRD-backed)",
       "Harvard Business School (Leadership Development); Voronezh State University",
-      "Based in Cascais, Portugal",
+      "Based in Limassol, Cyprus",
     ],
     linkedin: "https://www.linkedin.com/in/vadim-uzberg-695210/",
   },
