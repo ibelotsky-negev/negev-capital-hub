@@ -17,18 +17,18 @@ const press: PressItem[] = [
     url: "https://news.abbvie.com/2025-08-25-AbbVie-to-Acquire-Gilgamesh-Pharmaceuticals-Bretisilocin,-a-Novel,-Investigational-Therapy-for-Major-Depressive-Disorder,-Expanding-Psychiatry-Pipeline",
   },
   {
-    outlet: "Otsuka Pharmaceutical",
-    date: "October 2023",
-    headline:
-      "Otsuka Pharmaceutical to Acquire Mindset Pharma, Strengthening Pipeline in Psychiatric & Neurological Disorders",
-    url: "https://otsuka-us.com/news/otsuka-pharmaceutical-acquire-mindset-pharma-strengthens-pipeline-area-psychiatric-and",
-  },
-  {
     outlet: "Endpoints News",
     date: "December 2024",
     headline:
       "Negev Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
     url: "https://endpoints.news/negev-labs-debuts-with-30m-in-assets-striving-to-build-a-network-of-psychedelic-biotechs/",
+  },
+  {
+    outlet: "Otsuka Pharmaceutical",
+    date: "October 2023",
+    headline:
+      "Otsuka Pharmaceutical to Acquire Mindset Pharma, Strengthening Pipeline in Psychiatric & Neurological Disorders",
+    url: "https://otsuka-us.com/news/otsuka-pharmaceutical-acquire-mindset-pharma-strengthens-pipeline-area-psychiatric-and",
   },
 ];
 
