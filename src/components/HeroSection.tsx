@@ -57,7 +57,7 @@ const HeroSection = () => {
               <span className="block text-primary-foreground/70 font-light">Fully invested. Realized.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base md:text-lg text-primary-foreground/70 leading-relaxed">
-              Negev Capital is a $30M+ biotech venture fund. Our realized exits include the AbbVie acquisition of Gilgamesh Pharmaceuticals (up to $1.2B, 2025), the Otsuka acquisition of Mindset Pharma (2023), and the public-market exit of Bright Minds Biosciences (Nasdaq: DRUG, 2024). Today, we continue building the next generation of CNS companies through Negev Labs, our CNS venture studio.
+              Negev Capital is a $30M+ biotech venture fund. Our realized exits include the AbbVie acquisition of Gilgamesh Pharmaceuticals (up to $1.2B, 2025), the Otsuka acquisition of Mindset Pharma (2023), and the public-market exit of Bright Minds Biosciences (Nasdaq: DRUG, 2024). Today, we continue building the next generation of CNS companies through Negev Labs, our venture studio.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" variant="secondary" className="font-medium">
