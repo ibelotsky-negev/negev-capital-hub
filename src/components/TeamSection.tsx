@@ -36,7 +36,7 @@ const team: TeamMember[] = [
     photo: kenPhoto,
     photoPosition: "center top",
     headline:
-      "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Negev Labs, the fund's CNS venture studio.",
+      "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Palomar Labs, the fund's CNS venture studio.",
     credentials: [
       "Technology entrepreneur and venture investor with 30+ private investments across the US, Israel, and Europe",
       "Co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group (2018)",

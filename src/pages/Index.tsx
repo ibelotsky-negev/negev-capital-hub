@@ -4,7 +4,7 @@ import ThesisSection from "@/components/ThesisSection";
 import ExitsSection from "@/components/ExitsSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TeamSection from "@/components/TeamSection";
-import NegevLabsSection from "@/components/NegevLabsSection";
+import PalomarLabsSection from "@/components/PalomarLabsSection";
 import PressSection from "@/components/PressSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -19,7 +19,7 @@ const Index = () => {
       <div className="border-t border-border" aria-hidden="true" />
       <PortfolioSection />
       <TeamSection />
-      <NegevLabsSection />
+      <PalomarLabsSection />
       <PressSection />
       <ContactSection />
       <Footer />

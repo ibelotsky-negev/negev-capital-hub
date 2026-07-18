@@ -160,7 +160,7 @@ var press = [
 var get_fund_overview_default = defineTool({
   name: "get_fund_overview",
   title: "Get fund overview",
-  description: "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Negev Labs venture studio summary.",
+  description: "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Palomar Labs venture studio summary.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -222,7 +222,7 @@ import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.23.0";
 var list_press_default = defineTool5({
   name: "list_press",
   title: "List press coverage",
-  description: "List press coverage of Negev Capital portfolio, exits, and Negev Labs \u2014 outlet, date, headline, and URL.",
+  description: "List press coverage of Negev Capital portfolio, exits, and Palomar Labs \u2014 outlet, date, headline, and URL.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -236,7 +236,7 @@ var mcp_default = defineMcp({
   name: "negev-capital-mcp",
   title: "Negev Capital",
   version: "0.1.0",
-  instructions: "Public read-only tools for Negev Capital \u2014 a $30M+ biotech venture fund focused on CNS and brain health. Use these to answer questions about the fund, its portfolio companies, realized exits (AbbVie/Gilgamesh, Otsuka/Mindset, Nasdaq/Bright Minds), team, press coverage, and the Negev Labs venture studio.",
+  instructions: "Public read-only tools for Negev Capital \u2014 a $30M+ biotech venture fund focused on CNS and brain health. Use these to answer questions about the fund, its portfolio companies, realized exits (AbbVie/Gilgamesh, Otsuka/Mindset, Nasdaq/Bright Minds), team, press coverage, and the Palomar Labs venture studio.",
   tools: [get_fund_overview_default, list_portfolio_default, list_exits_default, list_team_default, list_press_default]
 });
 

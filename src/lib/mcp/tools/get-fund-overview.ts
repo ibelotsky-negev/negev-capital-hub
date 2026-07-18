@@ -5,7 +5,7 @@ export default defineTool({
   name: "get_fund_overview",
   title: "Get fund overview",
   description:
-    "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Negev Labs venture studio summary.",
+    "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Palomar Labs venture studio summary.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
