@@ -10,6 +10,13 @@ interface PressItem {
 
 const press: PressItem[] = [
   {
+    outlet: "Fierce Biotech",
+    date: "July 16, 2026",
+    headline:
+      "Lilly buys AtaiBeckley for $2.8B upfront to challenge J&J for psychedelic mental health market",
+    url: "https://www.fiercebiotech.com/biotech/eli-lilly-inks-28b-ataibeckley-buyout-challenge-jj-psychedelic-mental-health-market",
+  },
+  {
     outlet: "AbbVie Newsroom",
     date: "August 25, 2025",
     headline:
@@ -20,7 +27,7 @@ const press: PressItem[] = [
     outlet: "Endpoints News",
     date: "December 2024",
     headline:
-      "Palomar Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
+      "Negev Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
     url: "https://endpoints.news/negev-labs-debuts-with-30m-in-assets-striving-to-build-a-network-of-psychedelic-biotechs/",
   },
   {
