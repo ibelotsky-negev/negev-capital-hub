@@ -4,7 +4,7 @@ const heroStats = [
   { value: "$30M+", label: "Fund Size" },
   { value: "2021", label: "Vintage" },
   { value: "16", label: "Portfolio Companies" },
-  { value: "3", label: "Realized Exits" },
+  { value: "4", label: "Exits" },
   { value: "Fully Invested", label: "Status" },
   { value: "Cayman Islands", label: "Domicile" },
   { value: "CNS / Brain Health · Seed–Series A", label: "Strategy" },
@@ -57,7 +57,7 @@ const HeroSection = () => {
               <span className="block text-primary-foreground/70 font-light">Fully invested. Realized.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base md:text-lg text-primary-foreground/70 leading-relaxed">
-              Negev Capital is a $30M+ biotech venture fund. Our realized exits include the AbbVie acquisition of Gilgamesh Pharmaceuticals (up to $1.2B, 2025), the Otsuka acquisition of Mindset Pharma (2023), and the public-market exit of Bright Minds Biosciences (Nasdaq: DRUG, 2024). Today, we continue building the next generation of CNS companies through Negev Labs, our venture studio.
+              Negev Capital is a $30M+ biotech venture fund. Our exits include Eli Lilly's pending ~$2.8B acquisition of AtaiBeckley — led by the BPL-003 program from our portfolio company Beckley Psytech — alongside the AbbVie acquisition of Gilgamesh Pharmaceuticals (up to $1.2B, 2025), the Otsuka acquisition of Mindset Pharma (2023), and the public-market exit of Bright Minds Biosciences (Nasdaq: DRUG, 2024). Today, we continue building the next generation of CNS companies through Negev Labs, our venture studio.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" variant="secondary" className="font-medium">
@@ -76,6 +76,10 @@ const HeroSection = () => {
               <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-primary-foreground/45">
                 Exits to:
               </span>
+              <span className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">
+                Eli Lilly
+              </span>
+              <span aria-hidden="true" className="text-primary-foreground/30">·</span>
               <span className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">
                 AbbVie
               </span>

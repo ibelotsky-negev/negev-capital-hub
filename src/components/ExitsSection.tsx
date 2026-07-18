@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 interface FeatureExit {
   company: string;
   logo: string;
+  badge?: string;
   dealValue: string;
   dealValueNote?: string;
   subline: string;
@@ -14,6 +15,17 @@ interface FeatureExit {
 }
 
 const featureExits: FeatureExit[] = [
+  {
+    company: "Beckley Psytech",
+    logo: "/logos/beckley.svg",
+    badge: "Announced Acquisition",
+    dealValue: "~$2.8B",
+    dealValueNote: "(upfront cash; up to ~$3.8B incl. milestone CVRs)",
+    subline: "Eli Lilly (NYSE: LLY) to acquire AtaiBeckley (Nasdaq: ATAI) · 2026",
+    body: "Eli Lilly agreed to acquire AtaiBeckley — the company formed by Beckley Psytech's combination with atai Life Sciences — in a transaction led by BPL-003, Beckley's intranasal 5-MeO-DMT candidate for treatment-resistant depression, which holds FDA Breakthrough Therapy Designation and has entered Phase 3. Expected to close Q3 2026, subject to shareholder and regulatory approvals.",
+    dealLabel: "Read the Lilly announcement",
+    dealUrl: "https://www.prnewswire.com/news-releases/lilly-to-acquire-ataibeckley-to-advance-therapies-for-treatment-resistant-depression-and-other-mental-health-conditions-302827468.html",
+  },
   {
     company: "Gilgamesh Pharmaceuticals",
     logo: "/logos/gilgamesh.png",
@@ -56,7 +68,7 @@ const ExitsSection = () => {
           Demonstrated outcomes for our investors — strategic acquisitions by global pharmaceutical leaders and public-market realizations.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {featureExits.map((exit) => (
             <Card
               key={exit.company}
@@ -77,7 +89,7 @@ const ExitsSection = () => {
                       {exit.company}
                     </h3>
                   </div>
-                  <Badge variant="exit" className="shrink-0">Realized Exit</Badge>
+                  <Badge variant="exit" className="shrink-0">{exit.badge ?? "Realized Exit"}</Badge>
                 </div>
 
                 <div className="mt-6 pb-6 border-b border-exit-border/60">
