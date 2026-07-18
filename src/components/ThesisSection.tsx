@@ -10,7 +10,7 @@ const ThesisSection = () => {
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             Negev Capital was founded on the conviction that psychedelic-derived and novel
             neuropsychiatric compounds would become a mainstream therapeutic category. The fund's
-            exits to Eli Lilly, AbbVie and Otsuka validated that thesis. Today, through Negev Labs and our
+            exits to Eli Lilly, AbbVie and Otsuka validated that thesis. Today, through Palomar Labs and our
             active portfolio, we continue to build at the intersection of neuroscience innovation
             and clinical drug development.
           </p>

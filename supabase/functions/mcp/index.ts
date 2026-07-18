@@ -21,9 +21,9 @@ var fundOverview = {
   realizedExits: 3,
   website: "https://www.negevcap.com",
   ventureStudio: {
-    name: "Negev Labs",
-    website: "https://negevlabs.com",
-    description: "Negev Labs sources overlooked CNS drug candidates backed by existing human data, builds them into capital-efficient companies, and targets pharma licensing on accelerated timelines. The studio model is designed to deliver founder-level returns to our investors.",
+    name: "Palomar Labs",
+    website: "https://palomar-labs.com",
+    description: "Palomar Labs sources overlooked CNS drug candidates backed by existing human data, builds them into capital-efficient companies, and targets pharma licensing on accelerated timelines. The studio model is designed to deliver founder-level returns to our investors.",
     companies: [
       {
         name: "Ariadne Bio",
@@ -99,7 +99,7 @@ var team = [
     name: "Ken Belotsky",
     title: "Partner",
     location: "Vienna, Austria",
-    headline: "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Negev Labs.",
+    headline: "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Palomar Labs.",
     credentials: [
       "Technology entrepreneur and venture investor with 30+ private investments across US, Israel, Europe",
       "Co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group (2018)",
@@ -145,7 +145,7 @@ var press = [
   {
     outlet: "Endpoints News",
     date: "2024-12",
-    headline: "Negev Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
+    headline: "Palomar Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
     url: "https://endpoints.news/negev-labs-debuts-with-30m-in-assets-striving-to-build-a-network-of-psychedelic-biotechs/"
   },
   {
@@ -160,7 +160,7 @@ var press = [
 var get_fund_overview_default = defineTool({
   name: "get_fund_overview",
   title: "Get fund overview",
-  description: "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Negev Labs venture studio summary.",
+  description: "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Palomar Labs venture studio summary.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -222,7 +222,7 @@ import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.23.0";
 var list_press_default = defineTool5({
   name: "list_press",
   title: "List press coverage",
-  description: "List press coverage of Negev Capital portfolio, exits, and Negev Labs \u2014 outlet, date, headline, and URL.",
+  description: "List press coverage of Negev Capital portfolio, exits, and Palomar Labs \u2014 outlet, date, headline, and URL.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
@@ -236,7 +236,7 @@ var mcp_default = defineMcp({
   name: "negev-capital-mcp",
   title: "Negev Capital",
   version: "0.1.0",
-  instructions: "Public read-only tools for Negev Capital \u2014 a $30M+ biotech venture fund focused on CNS and brain health. Use these to answer questions about the fund, its portfolio companies, realized exits (AbbVie/Gilgamesh, Otsuka/Mindset, Nasdaq/Bright Minds), team, press coverage, and the Negev Labs venture studio.",
+  instructions: "Public read-only tools for Negev Capital \u2014 a $30M+ biotech venture fund focused on CNS and brain health. Use these to answer questions about the fund, its portfolio companies, realized exits (AbbVie/Gilgamesh, Otsuka/Mindset, Nasdaq/Bright Minds), team, press coverage, and the Palomar Labs venture studio.",
   tools: [get_fund_overview_default, list_portfolio_default, list_exits_default, list_team_default, list_press_default]
 });
 

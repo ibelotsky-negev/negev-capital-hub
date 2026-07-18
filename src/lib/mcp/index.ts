@@ -10,6 +10,6 @@ export default defineMcp({
   title: "Negev Capital",
   version: "0.1.0",
   instructions:
-    "Public read-only tools for Negev Capital — a $30M+ biotech venture fund focused on CNS and brain health. Use these to answer questions about the fund, its portfolio companies, realized exits (AbbVie/Gilgamesh, Otsuka/Mindset, Nasdaq/Bright Minds), team, press coverage, and the Negev Labs venture studio.",
+    "Public read-only tools for Negev Capital — a $30M+ biotech venture fund focused on CNS and brain health. Use these to answer questions about the fund, its portfolio companies, realized exits (AbbVie/Gilgamesh, Otsuka/Mindset, Nasdaq/Bright Minds), team, press coverage, and the Palomar Labs venture studio.",
   tools: [getFundOverview, listPortfolio, listExits, listTeam, listPress],
 });

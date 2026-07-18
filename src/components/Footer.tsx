@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Exits", href: "/#exits" },
   { label: "Portfolio", href: "/#portfolio" },
   { label: "Team", href: "/#team" },
-  { label: "Negev Labs", href: "/#labs" },
+  { label: "Palomar Labs", href: "/#labs" },
   { label: "Press", href: "/#press" },
 ];
 

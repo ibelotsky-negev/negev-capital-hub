@@ -33,27 +33,27 @@ const labs: Lab[] = [
   },
 ];
 
-const NegevLabsSection = () => {
+const PalomarLabsSection = () => {
   return (
     <section id="labs" className="py-20 md:py-28 bg-muted border-t border-border">
       <div className="container mx-auto px-6">
-        <p className="eyebrow">Negev Labs</p>
+        <p className="eyebrow">Palomar Labs</p>
         <h2 className="mt-2 text-3xl md:text-4xl font-semibold text-foreground max-w-3xl">
           Our CNS venture studio.
         </h2>
         <p className="mt-6 text-muted-foreground text-[15px] md:text-base leading-relaxed max-w-3xl">
-          Negev Labs sources overlooked CNS drug candidates backed by existing human data, builds
+          Palomar Labs sources overlooked CNS drug candidates backed by existing human data, builds
           them into capital-efficient companies, and targets pharma licensing on accelerated
           timelines. The studio model is designed to deliver founder-level returns to our investors.
         </p>
         <p className="mt-4 text-[15px] md:text-base max-w-3xl">
           <a
-            href="https://negevlabs.com"
+            href="https://palomar-labs.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground underline underline-offset-4 hover:text-foreground/70 transition-colors"
           >
-            Visit Negev Labs &rarr;
+            Visit Palomar Labs &rarr;
           </a>
         </p>
 
@@ -133,4 +133,4 @@ const NegevLabsSection = () => {
   );
 };
 
-export default NegevLabsSection;
+export default PalomarLabsSection;

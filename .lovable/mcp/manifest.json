@@ -15,7 +15,7 @@
       {
         "name": "get_fund_overview",
         "title": "Get fund overview",
-        "description": "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Negev Labs venture studio summary.",
+        "description": "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Palomar Labs venture studio summary.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -90,7 +90,7 @@
       {
         "name": "list_press",
         "title": "List press coverage",
-        "description": "List press coverage of Negev Capital portfolio, exits, and Negev Labs — outlet, date, headline, and URL.",
+        "description": "List press coverage of Negev Capital portfolio, exits, and Palomar Labs — outlet, date, headline, and URL.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
