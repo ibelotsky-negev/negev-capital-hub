@@ -48,7 +48,7 @@ const PressSection = () => {
           Coverage of our portfolio and exits.
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {press.map((item, i) => (
             <a
               key={i}
