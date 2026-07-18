@@ -21,9 +21,9 @@ var fundOverview = {
   realizedExits: 3,
   website: "https://www.negevcap.com",
   ventureStudio: {
-    name: "Negev Labs",
-    website: "https://negevlabs.com",
-    description: "Negev Labs sources overlooked CNS drug candidates backed by existing human data, builds them into capital-efficient companies, and targets pharma licensing on accelerated timelines. The studio model is designed to deliver founder-level returns to our investors.",
+    name: "Palomar Labs",
+    website: "https://palomar-labs.com",
+    description: "Palomar Labs sources overlooked CNS drug candidates backed by existing human data, builds them into capital-efficient companies, and targets pharma licensing on accelerated timelines. The studio model is designed to deliver founder-level returns to our investors.",
     companies: [
       {
         name: "Ariadne Bio",
@@ -99,7 +99,7 @@ var team = [
     name: "Ken Belotsky",
     title: "Partner",
     location: "Vienna, Austria",
-    headline: "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Negev Labs.",
+    headline: "Co-Founding Partner at Negev Capital since 2021 and Co-Founder of Palomar Labs.",
     credentials: [
       "Technology entrepreneur and venture investor with 30+ private investments across US, Israel, Europe",
       "Co-founded Bright Box, a global connected-car platform sold to Zurich Insurance Group (2018)",
@@ -145,7 +145,7 @@ var press = [
   {
     outlet: "Endpoints News",
     date: "2024-12",
-    headline: "Negev Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
+    headline: "Palomar Labs debuts with $30M in assets, striving to build a network of psychedelic biotechs",
     url: "https://endpoints.news/negev-labs-debuts-with-30m-in-assets-striving-to-build-a-network-of-psychedelic-biotechs/"
   },
   {
