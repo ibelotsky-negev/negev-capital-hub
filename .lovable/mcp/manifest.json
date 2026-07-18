@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "sdk_version": "0.23.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "negev-capital-mcp",
+      "version": "0.1.0",
+      "title": "Negev Capital"
+    },
+    "tools": [
+      {
+        "name": "get_fund_overview",
+        "title": "Get fund overview",
+        "description": "Return Negev Capital fund facts: size, vintage, domicile, strategy, status, portfolio count, realized exits, and the Negev Labs venture studio summary.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_portfolio_companies",
+        "title": "List portfolio companies",
+        "description": "List Negev Capital portfolio companies. Optionally filter by status: active, exit (realized exit), merged, or liquidity.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "status": {
+              "description": "Filter by portfolio status. Omit to return all.",
+              "type": "string",
+              "enum": [
+                "active",
+                "exit",
+                "merged",
+                "liquidity"
+              ]
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_realized_exits",
+        "title": "List realized exits",
+        "description": "List Negev Capital's realized exits with counterparty, year, deal value, summary, and news URL.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_team",
+        "title": "List team members",
+        "description": "List the Negev Capital team: partners and Scientific Advisory Board chair with titles, headline bio, credentials, location, and LinkedIn URLs.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_press",
+        "title": "List press coverage",
+        "description": "List press coverage of Negev Capital portfolio, exits, and Negev Labs — outlet, date, headline, and URL.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
