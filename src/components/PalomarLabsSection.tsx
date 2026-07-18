@@ -42,9 +42,10 @@ const PalomarLabsSection = () => {
           Our CNS venture studio.
         </h2>
         <p className="mt-6 text-muted-foreground text-[15px] md:text-base leading-relaxed max-w-3xl">
-          Palomar Labs sources overlooked CNS drug candidates backed by existing human data, builds
-          them into capital-efficient companies, and targets pharma licensing on accelerated
-          timelines. The studio model is designed to deliver founder-level returns to our investors.
+          Palomar Labs (formerly known as Negev Labs) sources overlooked CNS drug candidates backed
+          by existing human data, builds them into capital-efficient companies, and targets pharma
+          licensing on accelerated timelines. The studio model is designed to deliver founder-level
+          returns to our investors.
         </p>
         <p className="mt-4 text-[15px] md:text-base max-w-3xl">
           <a
