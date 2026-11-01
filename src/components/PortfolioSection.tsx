@@ -86,7 +86,7 @@ const companies: Company[] = [
     focus: "Clinical-stage psychedelic medicines for neurological and psychiatric disorders; lead asset BPL-003 (intranasal 5-MeO-DMT) for treatment-resistant depression.",
     status: "exit",
     website: "https://atai.life/",
-    note: "Eli Lilly to acquire AtaiBeckley (announced 2026) — via combination with atai Life Sciences",
+    note: "Acquired by Eli Lilly (2026) — via combination with atai Life Sciences",
     dealUrl: "https://www.prnewswire.com/news-releases/lilly-to-acquire-ataibeckley-to-advance-therapies-for-treatment-resistant-depression-and-other-mental-health-conditions-302827468.html",
     stage: "Phase 3",
     modality: "5-MeO-DMT (psychedelic)",
