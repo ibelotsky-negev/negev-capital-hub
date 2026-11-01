@@ -25,7 +25,7 @@ export const fundOverview = {
         modality: "Non-hallucinogenic 5-HT2A agonist",
         indication: "Apathy in Parkinson's / late-life depression",
         description:
-          "Ariadne Bio is developing AB-300, a first-in-class non-hallucinogenic 5-HT2A agonist designed to treat apathy in Parkinson's disease, late-life depression, and neurodegeneration — an unmet need affecting ~8 million U.S. patients with zero approved therapies. Phase 1b trial initiation targeted for Q3 2026.",
+          "Ariadne Bio is developing AB-300, a first-in-class non-hallucinogenic 5-HT2A agonist designed to treat apathy in Parkinson's disease, late-life depression, and neurodegeneration — an unmet need affecting ~8 million U.S. patients with zero approved therapies. Phase 1b trial initiation targeted for Q4 2026.",
       },
     ],
   },
