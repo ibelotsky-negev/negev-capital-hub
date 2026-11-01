@@ -26,7 +26,7 @@ const labs: Lab[] = [
     website: "https://www.ariadnebio.com",
     logo: "/logos/ariadne.png",
     meta: [
-      { label: "Stage", value: "Preclinical → Phase 1b Q3 2026" },
+      { label: "Stage", value: "Phase 1b" },
       { label: "Modality", value: "Non-hallucinogenic 5-HT2A agonist" },
       { label: "Indication", value: "Apathy in Parkinson's / late-life depression" },
     ],

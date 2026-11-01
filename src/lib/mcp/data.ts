@@ -21,7 +21,7 @@ export const fundOverview = {
         name: "Ariadne Bio",
         status: "Active",
         website: "https://www.ariadnebio.com",
-        stage: "Preclinical → Phase 1b Q3 2026",
+        stage: "Phase 1b",
         modality: "Non-hallucinogenic 5-HT2A agonist",
         indication: "Apathy in Parkinson's / late-life depression",
         description:
