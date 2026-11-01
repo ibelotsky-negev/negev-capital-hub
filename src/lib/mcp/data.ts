@@ -9,7 +9,7 @@ export const fundOverview = {
   domicile: "Cayman Islands",
   strategy: "CNS / Brain Health · Seed–Series A",
   portfolioCompanies: 16,
-  realizedExits: 3,
+  realizedExits: 4,
   website: "https://www.negevcap.com",
   ventureStudio: {
     name: "Palomar Labs",
@@ -51,7 +51,7 @@ export const portfolio: PortfolioCompany[] = [
   { name: "Mindset Pharma", status: "exit", focus: "Next-generation psychedelic medicines for neuropsychiatric and neurological disorders.", website: "https://www.mindsetpharma.com/", note: "Acquired by Otsuka", stage: "Preclinical", modality: "Small molecule", indication: "Neuropsychiatric", invested: "2021" },
   { name: "Bright Minds Biosciences", status: "exit", focus: "Selective serotonin receptor agonists for epilepsy and neuropsychiatric disorders.", website: "https://www.brightmindsbio.com/", note: "Public-market exit · Nasdaq: DRUG · 2024", stage: "Phase 2", modality: "Small molecule", indication: "Epilepsy / Neuropsychiatry", invested: "2021" },
   { name: "Awakn Life Sciences", status: "merged", focus: "Therapeutics for substance and behavioral addictions, focus on Alcohol Use Disorder.", website: "https://www.solvonis.com/", note: "Merged with Solvonis Therapeutics", stage: "Phase 2", modality: "Small molecule", indication: "Alcohol Use Disorder", invested: "2021" },
-  { name: "Beckley Psytech", status: "merged", focus: "Clinical-stage psychedelic medicines for neurological and psychiatric disorders.", website: "https://atai.life/", note: "Merged with atai Life Sciences", stage: "Phase 2", modality: "Psychedelic", indication: "Treatment-resistant depression", invested: "2021" },
+  { name: "Beckley Psytech", status: "exit", focus: "Clinical-stage psychedelic medicines for neurological and psychiatric disorders; lead asset BPL-003 (intranasal 5-MeO-DMT) for treatment-resistant depression.", website: "https://atai.life/", note: "Acquired by Eli Lilly (2026) via AtaiBeckley", dealUrl: "https://www.prnewswire.com/news-releases/lilly-to-acquire-ataibeckley-to-advance-therapies-for-treatment-resistant-depression-and-other-mental-health-conditions-302827468.html", stage: "Phase 3", modality: "5-MeO-DMT (psychedelic)", indication: "Treatment-resistant depression", invested: "2021" },
   { name: "Filament Health", status: "merged", focus: "GMP manufacturer of natural, standardized psychedelic drug candidates for clinical development.", website: "https://redlighthollandcorp.com/", note: "Merged with Red Light Holland (CSE: TRIP)", dealUrl: "https://www.newsfilecorp.com/release/288047/RETRANSMISSION-Red-Light-Holland-Signs-Definitive-Agreement-with-Filament-Health-to-Expand-Its-Platform-for-Natural-Psychedelic-Drug-Development-and-Microdosing-Innovation", stage: "Preclinical", modality: "Botanical psychedelics", indication: "Substance Use Disorders", invested: "2021" },
   { name: "Small Pharma", status: "merged", focus: "Clinical-stage DMT-based psychedelic therapies for depression and anxiety.", website: "https://www.cybin.com/", note: "Merged with Helus Pharma (formerly Cybin)", dealUrl: "https://www.businesswire.com/news/home/20230828350890/en/Cybin-to-Acquire-Small-Pharma-Inc.", stage: "Phase 2", modality: "DMT", indication: "Depression / Anxiety", invested: "2021" },
   { name: "Helus Pharma", status: "active", focus: "Clinical-stage neuropsychiatry company (formerly Cybin) advancing serotonergic agonists for MDD and GAD.", website: "https://www.cybin.com/", note: "Nasdaq: HELP", stage: "Phase 2", modality: "Serotonergic agonist", indication: "MDD / GAD", invested: "2021" },
@@ -66,6 +66,14 @@ export const portfolio: PortfolioCompany[] = [
 ];
 
 export const realizedExits = [
+  {
+    company: "Beckley Psytech",
+    counterparty: "Eli Lilly (via AtaiBeckley)",
+    year: "2026",
+    dealValue: "~$2.8B upfront cash; up to ~$3.8B incl. milestone CVRs",
+    summary: "Eli Lilly acquired AtaiBeckley, the company formed by Beckley Psytech's combination with atai Life Sciences, in a transaction led by BPL-003, Beckley's intranasal 5-MeO-DMT candidate for treatment-resistant depression.",
+    dealUrl: "https://www.prnewswire.com/news-releases/lilly-to-acquire-ataibeckley-to-advance-therapies-for-treatment-resistant-depression-and-other-mental-health-conditions-302827468.html",
+  },
   {
     company: "Gilgamesh Pharmaceuticals",
     counterparty: "AbbVie",
