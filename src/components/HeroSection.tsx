@@ -54,7 +54,7 @@ const HeroSection = () => {
           <div className="lg:col-span-3">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
               CNS and brain health therapeutics.
-              <span className="block text-primary-foreground/70 font-light">Fully invested. Partly realised.</span>
+              <span className="block text-primary-foreground/70 font-light">Fully invested. Partly realized.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base md:text-lg text-primary-foreground/70 leading-relaxed">
               Negev Capital is a $30M+ biotech venture fund. Our exits include Eli Lilly's ~$2.8B acquisition of AtaiBeckley (2026) — led by the BPL-003 program from our portfolio company Beckley Psytech — alongside the AbbVie acquisition of Gilgamesh Pharmaceuticals (up to $1.2B, 2025), the Otsuka acquisition of Mindset Pharma (2023), and the public-market exit of Bright Minds Biosciences (Nasdaq: DRUG, 2024). Today, we continue building the next generation of CNS companies through Palomar Labs, our venture studio.
