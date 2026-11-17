@@ -11,7 +11,7 @@ import { defineTool } from "npm:@lovable.dev/mcp-js@0.23.0";
 // src/lib/mcp/data.ts
 var fundOverview = {
   name: "Negev Capital",
-  tagline: "CNS and brain health therapeutics. Fully invested. Realized.",
+  tagline: "CNS and brain health therapeutics. Fully invested. Partly realised.",
   size: "$30M+",
   vintage: "2021",
   status: "Fully Invested",
